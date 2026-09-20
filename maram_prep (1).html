@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تجهيز مقابلة د. مرام سندوقة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E3B43; --ink-2:#1F5560; --glass:#EAF2F0; --paper:#F7FAF9; --line:#C9D8D4;
+  --muted:#5E7470; --amber:#C98A12; --amber-bg:#FBF1DC; --ox:#8C2F39; --ox-bg:#F6E4E6;
+  --ok:#2E7D5B; --ok-bg:#E1F2EA; --card:#FFFFFF; --text:#12282C;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#8FD0CB; --ink-2:#6FB6B0; --glass:#132A2E; --paper:#0D1E21; --line:#2A4549;
+    --muted:#93ABA7; --amber:#E6B24A; --amber-bg:#3A2F17; --ox:#E58C95; --ox-bg:#3A1E22;
+    --ok:#7ED1A8; --ok-bg:#16352A; --card:#15292C; --text:#E4EFED;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#8FD0CB; --ink-2:#6FB6B0; --glass:#132A2E; --paper:#0D1E21; --line:#2A4549;
+  --muted:#93ABA7; --amber:#E6B24A; --amber-bg:#3A2F17; --ox:#E58C95; --ox-bg:#3A1E22;
+  --ok:#7ED1A8; --ok-bg:#16352A; --card:#15292C; --text:#E4EFED;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--paper);color:var(--text);
+  font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:16px;line-height:1.75}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ink);color:#fff;
+  display:flex;align-items:center;gap:12px;padding:10px 18px}
+:root[data-theme="dark"] .top{color:#0D1E21}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top{color:#0D1E21}}
+.top h1{font-size:1.05rem;margin:0;font-weight:600;flex:1}
+.top button{background:transparent;border:1px solid currentColor;color:inherit;border-radius:6px;padding:4px 12px;font-size:.9rem}
+.shell{display:flex;max-width:1200px;margin:0 auto}
+nav.rail{position:sticky;top:56px;align-self:flex-start;width:230px;padding:18px 12px;flex-shrink:0}
+nav.rail button{display:block;width:100%;text-align:start;background:none;border:none;color:var(--text);
+  padding:9px 12px;border-radius:6px;margin-bottom:2px;font-size:.97rem}
+nav.rail button[aria-current="true"]{background:var(--glass);color:var(--ink);font-weight:600;
+  box-shadow:inset 3px 0 0 var(--ink)}
+[dir="rtl"] nav.rail button[aria-current="true"]{box-shadow:inset -3px 0 0 var(--ink)}
+main{flex:1;min-width:0;padding:22px 22px 110px}
+.view{display:none;max-width:820px}
+.view.on{display:block}
+h2{font-size:1.7rem;line-height:1.35;margin:4px 0 6px;color:var(--ink);font-weight:700}
+h3{font-size:1.18rem;margin:26px 0 8px;color:var(--ink-2);font-weight:600}
+p.lead{color:var(--muted);margin:0 0 18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.strong{background:var(--amber-bg);border-inline-start:4px solid var(--amber);border-radius:6px;padding:12px 16px;margin:12px 0}
+.warn{background:var(--ox-bg);border-inline-start:4px solid var(--ox);border-radius:6px;padding:12px 16px;margin:12px 0}
+.tag{display:inline-block;font-size:.8rem;padding:1px 9px;border-radius:20px;background:var(--glass);color:var(--ink);margin-inline-end:6px}
+ul{padding-inline-start:22px;margin:6px 0}
+li{margin:4px 0}
+.ltr{direction:ltr;unicode-bidi:isolate}
+/* Hero */
+.hero{padding:26px 0 8px}
+.hero .who{font-size:2.3rem;font-weight:700;line-height:1.2;color:var(--ink);margin:0}
+.hero .what{font-size:1.1rem;color:var(--muted);margin:6px 0 18px}
+.meters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.meter{border-top:3px solid var(--ink);padding-top:8px}
+.meter b{font-size:1.6rem;display:block;color:var(--ink)}
+.meter span{font-size:.88rem;color:var(--muted)}
+.go{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{background:var(--ink);color:var(--paper);border:none;border-radius:8px;padding:10px 18px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.small{padding:6px 12px;font-size:.9rem;font-weight:500}
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.fact b{display:block;font-size:1.25rem;color:var(--ink)}
+.fact span{font-size:.92rem}
+/* accordion */
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:10px 0}
+summary{padding:14px 16px;font-weight:600;cursor:pointer;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+details .inner{padding:0 18px 14px}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:start;vertical-align:top}
+th{background:var(--glass);color:var(--ink)}
+/* rehearse */
+.stage{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:12px}
+.stage .q{font-size:1.45rem;font-weight:600;line-height:1.5;margin:10px 0 18px;color:var(--text)}
+.stagebar{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.ring{width:74px;height:74px;position:relative;flex-shrink:0}
+.ring svg{transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--ink);font-size:1.05rem}
+.answer{display:none;margin-top:16px;border-top:1px dashed var(--line);padding-top:14px}
+.answer.show{display:block}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:20px;padding:4px 13px;font-size:.9rem}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.navrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;align-items:center}
+.count{color:var(--muted);font-size:.9rem;margin-inline-start:auto}
+/* flashcards */
+.flip{perspective:1200px;margin-top:14px}
+.fc{position:relative;height:260px;transition:transform .5s;transform-style:preserve-3d;cursor:pointer}
+.fc.turn{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:14px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:1.3rem;line-height:1.55;background:var(--card)}
+.face.back{transform:rotateY(180deg);background:var(--glass);font-size:1.08rem}
+@media (prefers-reduced-motion:reduce){.fc{transition:none}}
+/* quiz */
+.opt{display:block;width:100%;text-align:start;background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:10px 14px;margin:7px 0;color:var(--text)}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrong{border-color:var(--ox);background:var(--ox-bg)}
+.expl{margin-top:10px;display:none}
+.expl.show{display:block}
+/* checklist */
+.chk{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-bottom:1px solid var(--line)}
+.chk input{width:20px;height:20px;margin-top:5px;accent-color:var(--ink);flex-shrink:0}
+.chk.done label{color:var(--muted);text-decoration:line-through}
+.chk small{display:block;color:var(--muted);text-decoration:none}
+.pbar{height:8px;background:var(--glass);border-radius:6px;overflow:hidden;margin:6px 0 14px}
+.pbar i{display:block;height:100%;background:var(--ink);width:0}
+.meters{grid-template-columns:repeat(4,1fr)}
+.lesson{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0;width:100%;text-align:start;color:var(--text)}
+.lesson:hover{border-color:var(--ink)}
+.lesson .n{flex-shrink:0;width:34px;height:34px;border-radius:50%;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--ink)}
+.lesson.done .n{background:var(--ink);color:var(--paper)}
+.lesson b{display:block;color:var(--ink);font-size:1.05rem}
+.lesson span{font-size:.92rem;color:var(--muted)}
+.reader p{margin:8px 0 12px}
+.reader ol{padding-inline-start:24px}
+.goal{background:var(--glass);border-radius:8px;padding:12px 16px;margin:10px 0 6px}
+.selfq{border-bottom:1px solid var(--line);padding:10px 0}
+.selfq .ans{display:none;margin-top:8px;color:var(--ok);font-weight:500}
+.selfq .ans.show{display:block}
+.search{width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:var(--card);color:var(--text);margin:8px 0 12px}
+/* mobile nav */
+nav.tabs{display:none}
+@media (max-width:860px){
+  nav.rail{display:none}
+  main{padding:16px 14px 120px}
+  nav.tabs{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);
+    overflow-x:auto;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+  nav.tabs button{flex:0 0 auto;background:none;border:none;color:var(--muted);padding:8px 12px;font-size:.88rem;border-radius:6px;white-space:nowrap}
+  nav.tabs button[aria-current="true"]{color:var(--ink);background:var(--glass);font-weight:600}
+  .hero .who{font-size:1.8rem}
+  .stage .q{font-size:1.2rem}
+  .meters{grid-template-columns:1fr 1fr}
+  .meter b{font-size:1.25rem}
+}
+@media print{nav,.top,.go,.navrow{display:none}.view{display:block!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1 id="apptitle"></h1>
+  <button id="langBtn" type="button"></button>
+</header>
+<div class="shell">
+  <nav class="rail" id="rail" aria-label="sections"></nav>
+  <main id="main"></main>
+</div>
+<nav class="tabs" id="tabs" aria-label="sections"></nav>
+
+<script>
+const store={get(k,d){try{const v=localStorage.getItem("mp_"+k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem("mp_"+k,JSON.stringify(v))}catch(e){}}};
+let L=store.get("lang","ar");
+const T=o=>typeof o==="string"?o:(o[L]||o.ar);
+
+/* ================= DATA ================= */
+const UI={
+  title:{ar:"تجهيز المقابلة — د. مرام سندوقة",en:"Interview prep — Dr. Maram Sandouka"},
+  lang:{ar:"English",en:"العربية"},
+  nav:{
+    home:{ar:"البداية",en:"Start"}, study:{ar:"المذاكرة",en:"Study"}, gloss:{ar:"قاموس المصطلحات",en:"Glossary"}, brief:{ar:"ورقة اليوم الأخير",en:"Final-day sheet"},
+    people:{ar:"المحاور والجهة",en:"Interviewer & group"}, learn:{ar:"مراجعة سريعة",en:"Quick review"},
+    rehearse:{ar:"محاكاة المقابلة",en:"Mock interview"}, cards:{ar:"بطاقات الحفظ",en:"Flashcards"},
+    quiz:{ar:"اختبار سريع",en:"Quick quiz"}, ideas:{ar:"مقترحاتك للحبيب",en:"Your proposals"},
+    check:{ar:"قائمة التجهيز",en:"Checklist"}
+  }
+};
+const ORDER=["home","study","gloss","learn","brief","people","rehearse","cards","quiz","ideas","check"];
+
+const FACTS=[
+ {b:"28/06/2026",a:"صدور دليل SFDA للتجارب السريرية الإصدار 4.0",e:"SFDA clinical trials guideline v4.0 issued"},
+ {b:"3",a:"سنوات حد أقصى لقِدم تدريب GCP لكل الفريق البحثي (SFDA)",e:"years max age of GCP training for the whole team (SFDA)"},
+ {b:"60 / 40 / 30",a:"أيام عمل لرد الهيئة: المرحلة الأولى / الثانية / الثالثة",e:"working days SFDA response: Phase I / II / III"},
+ {b:"15 / 10",a:"أيام عمل: التكافؤ الحيوي / المرحلة الرابعة",e:"working days: bioequivalence / Phase IV"},
+ {b:"80.00–125.00%",a:"حدود فترة الثقة 90% لـ AUC و Cmax في التكافؤ الحيوي",e:"90% CI limits for AUC and Cmax in BE"},
+ {b:"7 / 15",a:"أيام للإبلاغ عن SUSAR: مميت أو مهدد للحياة / غيره",e:"days to report a SUSAR: fatal or life-threatening / other"},
+ {b:"06/01/2025",a:"اعتماد ICH E6(R3)",e:"ICH E6(R3) adopted"},
+ {b:"م/59 — 1431هـ",a:"نظام أخلاقيات البحث على المخلوقات الحية",e:"Law of Ethics of Research on Living Creatures (M/59)"},
+ {b:"1.5 مليون ريال",a:"جوائز البحث العلمي لمجلة الحبيب التي يرأس تحريرها د. زياد",e:"SAR 1.5M research awards of the journal Dr. Ziad edits"},
+ {b:"3Rs",a:"استبدال، تقليل، تحسين: مبدأ التجارب الحيوانية",e:"Replacement, Reduction, Refinement: animal research"},
+ {b:"≥ 5",a:"أضعاف عمر النصف: فترة الغسيل المعتادة في دراسات التكافؤ",e:"half-lives: typical BE washout"},
+ {b:"30/09/2026",a:"إيقاف Microsoft Project Online نهائياً",e:"Microsoft Project Online retires"}
+];
+
+const PITCH={
+ ar:"أنا مرام سندوقة. أعمل منذ أكثر من اثني عشر عاماً في المنطقة بين العلم والتشغيل. بدأت في المختبر، ثم قدت عمليات الإنتاج والجودة، ثم انتقلت إلى تأسيس وترخيص مرافق التكافؤ الحيوي بالتعاون مع SFDA. ما أجيده هو تحويل المتطلبات العلمية والأخلاقية والتنظيمية إلى منظومة تشغيلية منضبطة: إجراءات، وفرق مدربة، وموردون، وميزانيات. وأرى في مجموعة الحبيب فرصة لبناء قدرات بحثية وسريرية بمعايير عالمية تخدم التوطين الدوائي ضمن رؤية 2030.",
+ en:"I’m Maram Sandouka. For over 12 years I’ve worked where science meets operations. I started in the lab, led production and quality operations, and moved into establishing and licensing bioequivalence facilities with the SFDA. My strength is turning scientific, ethical, and regulatory requirements into disciplined operations: procedures, trained teams, suppliers, and budgets. I see Al Habib as an opportunity to build world-class research and clinical capability that supports pharmaceutical localisation under Vision 2030."
+};
+const ASK=[
+ {ar:"كم متوسط زمن مراجعة لجنة الأخلاقيات حالياً من التقديم إلى الموافقة؟",en:"What is the current average IRB turnaround from submission to approval?"},
+ {ar:"هل هناك خطة لاعتماد دولي للجنة الأخلاقيات مثل AAHRPP؟",en:"Is there a plan for international IRB accreditation such as AAHRPP?"},
+ {ar:"هل هناك توجه لإنشاء وحدة تجارب سريرية مركزية تخدم مستشفيات المجموعة؟",en:"Is there a plan for a central clinical trials unit serving all hospitals?"},
+ {ar:"ما أولويات مركز الأبحاث والأكاديمية للسنتين القادمتين؟",en:"What are the Research Center and Academy priorities for the next two years?"},
+ {ar:"كيف يُقاس النجاح في هذا الدور خلال السنة الأولى؟",en:"How will success in this role be measured in the first year?"}
+];
+const DONT=[
+ {ar:"لا تقولي «لا يوجد مركز معتمد لتدريب GCP في المملكة» بشكل مطلق. قولي: لا يوجد برنامج وطني معروف يجمع الاعتراف الدولي مع الأنظمة السعودية باللغتين.",en:"Don’t say “there is no accredited GCP centre in the Kingdom” in absolute terms. Say: no well-known national programme combines international recognition with Saudi regulations in both languages."},
+ {ar:"لا تذكري أي تفاصيل تعاقدية أو مالية أو خلافات تشغيلية عن مشروع KAIMRC.",en:"Don’t share any contractual, financial, or operational-dispute details about the KAIMRC project."},
+ {ar:"لا تنتقدي لجنة الأخلاقيات أو إجراءات الحبيب مباشرة. اطرحي كل ملاحظة كفرصة تطوير.",en:"Don’t criticise Al Habib’s IRB or processes directly. Frame every point as an improvement opportunity."},
+ {ar:"لا تعدي بأي اعتماد (TransCelerate أو IAOCR) قبل الحصول عليه. قولي «أقترح» و«يمكن».",en:"Don’t promise any accreditation before it exists. Say “I propose” and “we could”."},
+ {ar:"لا تقولي إن حدود 80–125% تعني السماح بفرق 20%.",en:"Don’t say the 80–125% limits allow a 20% difference."},
+ {ar:"لا تقدمي نفسك كباحثة بمستوى المحاور. قدمي نفسك كمن يحوّل البحث إلى بنية تشغيلية.",en:"Don’t position yourself as a researcher at the interviewer’s level. Position yourself as the person who turns research into working infrastructure."}
+];
+
+const MEMISH=[
+ {ar:"أخصائي أمراض معدية، ورئيس تحرير مجلة الدكتور سليمان الحبيب الطبية، وأستاذ في كلية الطب بجامعة الفيصل.",en:"Infectious disease specialist; Editor-in-Chief of the Dr. Sulaiman Al Habib Medical Journal; professor at Alfaisal University College of Medicine."},
+ {ar:"مصنف ضمن الباحثين الأكثر استشهاداً عالمياً (Highly Cited) من 2018 إلى 2024، وله أكثر من 900 ورقة محكّمة.",en:"Highly Cited Researcher 2018–2024, with 900+ peer-reviewed papers."},
+ {ar:"نال جائزة الإنجاز مدى الحياة في التميز البحثي الصحي من هيئة تنمية البحث والتطوير والابتكار (أكتوبر 2024)، ووسام الملك عبدالعزيز من الدرجة الأولى (2007).",en:"RDIA Health Research Excellence Lifetime Achievement Award (Oct 2024); King Abdulaziz Medal, First Class (2007)."},
+ {ar:"مجالاته: مكافحة العدوى، والأمراض المعدية الناشئة، والصحة العامة. سيقيّمك بعين باحث ورئيس تحرير: النشر، والنزاهة، وجودة البيانات.",en:"Fields: infection control, emerging infections, public health. Expect a researcher’s and editor’s lens: publishing, integrity, data quality."},
+ {ar:"مسماه الإداري الحالي داخل المجموعة غير منشور بوضوح. تأكدي منه عبر الجهة المنسقة للمقابلة.",en:"His exact current administrative title within the group is not clearly published. Confirm with whoever arranged the interview."}
+];
+const HMG=[
+ {ar:"لجنة الأخلاقيات (IRB) جزء من مركز الأبحاث التابع للشؤون الأكاديمية، وهي لجنة محلية تحت مظلة KACST (منظومة NCBE).",en:"The IRB sits within the Research Center under Academic Affairs, as a local committee under the KACST (NCBE) umbrella."},
+ {ar:"المراجعة على مرحلتين: علمية في مركز الأبحاث، ثم أخلاقية في اللجنة.",en:"Two-step review: scientific at the Research Center, then ethical at the IRB."},
+ {ar:"اللجنة نشطة: موافقة برقم RC 25.08.75 على دراسة منشورة مؤخراً، مع إعفاء من الموافقة المستنيرة لبيانات مجهولة الهوية. في 2019: 63 مشروعاً بنسبة قبول 68%.",en:"Active IRB: approval RC 25.08.75 on a recent study, with consent waived for de-identified data. In 2019: 63 projects, 68% acceptance."},
+ {ar:"جوائز البحث العلمي عبر المجلة: 1.5 مليون ريال (500 ألف، 300 ألف، 200 ألف، 200 ألف لأربع مراجعات، 150 ألف للطلاب، وجائزة لممارسين في برامج SCFHS)، برعاية وزير الصحة.",en:"Journal research awards: SAR 1.5M (500k, 300k, 200k, 200k for four reviews, 150k for students, plus an award for SCFHS trainees), under the Minister of Health’s patronage."},
+ {ar:"الأكاديمية: أُسست للتعليم الطبي المستمر ثم توسعت لبرامج دبلوم وزمالة، ودرّبت 2,500 ممارس في سنة مع 18 جامعة. وتشمل البورد والزمالة السعودية وزمالة جورج واشنطن في التعليم الطبي.",en:"Academy: founded for CME, expanded to diplomas and fellowships; trained 2,500 practitioners in a year with 18 universities; includes Saudi Board, fellowships, and a George Washington University fellowship."},
+ {ar:"جديد: كلية الدكتور سليمان الحبيب للمعرفة، بدأت قبول بكالوريوس التمريض (يونيو 2026)، والعام الدراسي بدأ 23 أغسطس 2026.",en:"New: Dr. Sulaiman Al Habib College of Knowledge; nursing BSc admissions opened June 2026, classes began 23 August 2026."},
+ {ar:"توسع: مستشفى جديد في الرياض بسعة 160 سريراً وتكلفة تقديرية 991 مليون ريال، متوقع تشغيله في الربع الثاني 2029.",en:"Expansion: new 160-bed Riyadh hospital, est. SAR 991M, expected to operate in Q2 2029."},
+ {ar:"غير منشور: رقم تسجيل اللجنة لدى NCBE، وأي اعتماد دولي لها، ووجود وحدة تجارب سريرية مستقلة. لا تذكريها كحقائق.",en:"Not published: the IRB’s NCBE number, any international accreditation, or a dedicated clinical trials unit. Don’t state these as facts."}
+];
+
+const TOPICS=[
+ {t:{ar:"أخلاقيات البحث: الأهداف والمبادئ",en:"Research ethics: aims and principles"},
+  b:{ar:["الهدف: سلامة المشارك وكرامته وحقوقه مقدَّمة دائماً على مصلحة العلم أو الممول، مع نتائج موثوقة.","المبادئ (Belmont وهلسنكي): احترام الأشخاص، والإحسان وعدم الإضرار، والعدالة.","النظام السعودي: نظام أخلاقيات البحث على المخلوقات الحية (م/59، 14/9/1431هـ)، ولجنة محلية في كل منشأة من خمسة أعضاء على الأقل، مسجلة لدى NCBE.","ICH E6(R3) اعتُمد في 6 يناير 2025: الجودة من التصميم، ورقابة متناسبة مع المخاطر، ونزاهة البيانات وسجلات التدقيق."],
+     en:["Aim: participant safety, dignity, and rights always come before science or sponsor interests, with credible results.","Principles (Belmont, Helsinki): respect for persons, beneficence/non-maleficence, justice.","Saudi law: Law of Ethics of Research on Living Creatures (M/59, 1431H); a local committee of at least five members per institution, registered with NCBE.","ICH E6(R3), adopted 6 January 2025: quality by design, risk-proportionate oversight, data integrity and audit trails."]},
+  s:{ar:"الأخلاقيات جزء من جودة البحث وليست عائقاً إدارياً. التأخير يُعالج بتحسين العمليات، لا بتخفيف المعايير.",en:"Ethics is part of research quality, not an administrative barrier. Fix delays through process, never by lowering standards."}},
+ {t:{ar:"الأخلاقيات: أساسي مقابل سريري مقابل حيواني",en:"Ethics: basic vs clinical vs animal"},
+  table:{h:{ar:["","البحث الأساسي","التجارب السريرية","التجارب الحيوانية"],en:["","Basic","Clinical trials","Animal"]},
+   r:{ar:[["الحماية","المعلومة والعينة والخصوصية","سلامة المشارك وحقوقه","رفاه الحيوان"],["الموافقة","على العينة والبيانات، وقد تكون موسّعة","مستنيرة كاملة مع حق الانسحاب","لا تنطبق؛ تبرير علمي"],["المبدأ","السرية وحماية البيانات","الخطر مقابل المنفعة و GCP","3Rs"],["الرقابة","اللجنة المحلية، غالباً مختصرة","اللجنة + SFDA + SCTR","اللجنة أو لجنة رعاية الحيوان"],["الجودة","نزاهة البيانات","ICH E6(R3)","GLP إذا كانت للتسجيل"]],
+      en:[["Protects","Information, samples, privacy","Participant safety and rights","Animal welfare"],["Consent","For samples/data; may be broad","Full informed consent, right to withdraw","N/A; scientific justification"],["Principle","Confidentiality, data protection","Risk vs benefit; GCP","3Rs"],["Oversight","Local committee, often expedited","IRB + SFDA + SCTR","IRB or animal care committee"],["Quality","Data integrity","ICH E6(R3)","GLP if for registration"]]}},
+  s:{ar:"التقارير الدورية للجنة أكثر تكراراً في التجارب السريرية (كل ثلاثة أشهر حسب تعديل اللائحة) مقارنة بالبحوث الأخرى (خلال 12 شهراً).",en:"Periodic IRB reports are more frequent for clinical trials (every three months per the amended regulations) than for other research (within 12 months)."}},
+ {t:{ar:"مراحل التجارب السريرية",en:"Clinical trial phases"},
+  table:{h:{ar:["المرحلة","الهدف","المشاركون","التركيز التشغيلي"],en:["Phase","Aim","Participants","Operational focus"]},
+   r:{ar:[["الأولى","السلامة والجرعة والحرائك","20–100 سليم (مرضى في الأورام)","وحدة مبيت، طوارئ، سحب عينات دقيق، سجل متطوعين"],["الثانية","فعالية أولية وتحديد الجرعة","عشرات إلى بضع مئات من المرضى","استقطاب دقيق، إدارة الدواء التجريبي"],["الثالثة","تأكيد الفعالية؛ أساس التسجيل","مئات إلى آلاف، مواقع متعددة","إدارة مواقع، مراقبة مبنية على المخاطر، جاهزية تفتيش"],["الرابعة","مراقبة ما بعد التسويق","واقع فعلي","يقظة دوائية، سجلات مرضية"]],
+      en:[["I","Safety, dose, PK","20–100 healthy (patients in oncology)","Overnight unit, emergency readiness, precise sampling, volunteer registry"],["II","Early efficacy, dose-ranging","Tens to a few hundred patients","Precise recruitment, IP management"],["III","Confirm efficacy; basis for registration","Hundreds to thousands, multi-site","Multi-site management, risk-based monitoring, inspection readiness"],["IV","Post-marketing surveillance","Real world","Pharmacovigilance, registries"]]}},
+  s:{ar:"دراسات التكافؤ الحيوي قريبة من المرحلة الأولى: متطوعون أصحاء وقياس للحرائك الدوائية.",en:"BE studies resemble Phase I: healthy volunteers and pharmacokinetic measurement."}},
+ {t:{ar:"الموافقات التنظيمية (SFDA الإصدار 4.0)",en:"Regulatory approvals (SFDA v4.0)"},
+  table:{h:{ar:["الدراسة","موقف الهيئة","اشتراط خاص","مدة الرد"],en:["Study","SFDA position","Specific requirement","Response"]},
+   r:{ar:[["المرحلة الأولى","موافقة مسبقة","وحدة مرحلة أولى معتمدة من الهيئة","60 يوم عمل"],["الثانية","موافقة مسبقة","بروتوكول، كتيب الباحث، تأمين","40 يوم عمل"],["الثالثة","موافقة مسبقة","كالثانية + IDMC عند الحاجة","30 يوم عمل"],["الرابعة","إخطار وإقرار","SCTR خلال 20 يوم عمل من موافقة IRB","10 أيام عمل"],["التكافؤ الحيوي","موافقة مسبقة","مركز مرخّص من الهيئة أو جهة محلية أو مجلس الصحة الخليجي","15 يوم عمل"],["المنتجات الحيوية","موافقة مسبقة","أي مرحلة","60 يوم عمل"]],
+      en:[["Phase I","Prior approval","SFDA-accredited Phase I unit","60 WD"],["Phase II","Prior approval","Protocol, IB, insurance","40 WD"],["Phase III","Prior approval","As II + IDMC if needed","30 WD"],["Phase IV","Notification + acknowledgement","SCTR within 20 WD of IRB approval","10 WD"],["BE","Prior approval","Centre licensed by SFDA, local authority, or Gulf Health Council","15 WD"],["Biologicals","Prior approval","Any phase","60 WD"]]}},
+  extra:{ar:["التسجيل في SCTR إلزامي لكل الدراسات، ولا يعني الموافقة.","رسوم 15,000 ريال؛ تُعفى الحكومية وغير الممولة والمرحلة الرابعة.","المرحلة الرابعة التي تتضمن استطباباً جديداً أو تغيير جرعة أو شكل صيدلاني تحتاج موافقة كاملة.","إخطار الهيئة خلال 60 يوماً عند الإغلاق، والتقرير النهائي خلال سنة (ICH E3).","مسار الاعتماد (Reliance): تسريع إذا اعتمدت الدراسة FDA أو EMA أو MHRA أو Swissmedic.","المراقب لا يجوز أن يكون من الفريق البحثي."],
+     en:["SCTR registration is mandatory for all studies and does not mean approval.","SAR 15,000 fee; waived for government-sponsored, unsponsored, and Phase IV.","Phase IV with a new indication, dose, or dosage form needs full approval.","Notify the SFDA within 60 days of close-out; final report within one year (ICH E3).","Reliance pathway: faster review if approved by FDA, EMA, MHRA, or Swissmedic.","The monitor must not be part of the research team."]},
+  s:{ar:"المدد تُحسب بعد اكتمال المستندات، وتتوقف أثناء رد مقدم الطلب.",en:"Timelines start after complete documentation and pause during applicant responses."}},
+ {t:{ar:"التكافؤ الحيوي",en:"Bioequivalence"},
+  b:{ar:["التعريف: مستحضران بنفس المادة والجرعة (جنيس ومرجعي) يصلان للدم بمعدل وكمية متقاربين بحيث لا يُتوقع فرق سريري.","المؤشرات: Cmax (معدل الامتصاص)، و AUC (كمية الامتصاص)، و Tmax (داعم).","القبول: فترة الثقة 90% لنسبة المتوسط الهندسي لـ AUC و Cmax ضمن 80.00–125.00%.","عالية التباين (CV ≥ 30%): في إرشادات EMA يمكن توسيع حدود Cmax فقط حتى 69.84–143.19% بتصميم متكرر.","ضيقة المؤشر العلاجي: حدود أضيق. الإعفاء الحيوي: حسب BCS والذوبان.","التصميم: عشوائي متقاطع 2x2، غسيل ≥ 5 أضعاف عمر النصف، صائمين أو بعد وجبة.","المكونات: الشق السريري، والتحليلي (LC-MS/MS و GLP)، والإحصائي والحرائكي.","الأخلاقيات: تعويض بدون إغراء، سجل مركزي يمنع المشاركة المتكررة، موافقة بلغة مفهومة، حق الانسحاب."],
+     en:["Definition: two products with the same ingredient and strength (generic vs reference) reach the blood at a similar rate and extent, so no clinical difference is expected.","Parameters: Cmax (rate), AUC (extent), Tmax (supportive).","Acceptance: 90% CI of the GMR for AUC and Cmax within 80.00–125.00%.","Highly variable (CV ≥ 30%): under EMA, Cmax limits only may widen up to 69.84–143.19% with a replicate design.","NTI drugs: tighter limits. Biowaiver: based on BCS and dissolution.","Design: randomised 2x2 crossover, washout ≥ 5 half-lives, fasting or fed.","Pillars: clinical, bioanalytical (LC-MS/MS under GLP), PK and statistics.","Ethics: fair pay without undue inducement, central registry against over-volunteering, plain-language consent, right to withdraw."]},
+  s:{ar:"80–125% لا تعني السماح بفرق 20%. المتوسطان يجب أن يكونا قريبين جداً حتى تقع فترة الثقة كاملة داخل الحدود.",en:"80–125% does not allow a 20% difference. The means must be very close for the whole interval to fit."}},
+ {t:{ar:"أطراف المنظومة: الراعي، الباحث، CRO، الشركة",en:"Parties: sponsor, investigator, CRO, company"},
+  b:{ar:["الشركة الدوائية: صاحبة المنتج، تصنّعه وفق GMP، وغالباً هي الراعي، وتسجّل الدواء بعد التجربة.","الراعي: يبدأ التجربة ويديرها ويمولها، ويتحمل المسؤولية النهائية عن الجودة ونزاهة البيانات.","CRO: تنفذ مهام الراعي بعقد. الراعي بلا وجود رسمي في المملكة يمكنه تفويض CRO أو الباحث الرئيس.","الباحث الرئيس: المسؤول في الموقع عن سلامة المشاركين والموافقة المستنيرة ودقة البيانات؛ يوقّع Form 4 ويفصح عن مصالحه (Form 3).","مسار السلامة: الباحث يبلغ الراعي فوراً ← الراعي يقيّم ← SUSAR للهيئة خلال 15 يوماً (7 إذا مميت أو مهدد للحياة)."],
+     en:["Pharma company: owns and manufactures the product under GMP, usually the sponsor, registers the drug after the trial.","Sponsor: initiates, manages, funds; holds ultimate responsibility for quality and data integrity.","CRO: performs sponsor tasks under contract. A sponsor without a KSA presence can authorise a CRO or the PI.","PI: accountable on site for participant safety, consent, and data accuracy; signs Form 4 and discloses interests (Form 3).","Safety flow: PI reports to sponsor immediately → sponsor assesses → SUSAR to SFDA within 15 days (7 if fatal or life-threatening)."]},
+  s:{ar:"القاعدة الذهبية: الراعي ينقل المهام، ولا ينقل المسؤولية النهائية.",en:"Golden rule: the sponsor can delegate tasks, never ultimate responsibility."}},
+ {t:{ar:"نموذج KAIMRC",en:"The KAIMRC model"},
+  b:{ar:["إدارة التجارب السريرية فيها: وحدة الأدوية التجريبية، والمراقبة وضمان الجودة، ووحدة المرحلة الأولى (تقدمها KAIMRC كالوحيدة المعتمدة من SFDA)، ومكتب التعزيز والتواصل.","CRO تعمل للراعي؛ SMO تعمل للموقع والباحث. إدارة KAIMRC تلبس القبعتين حسب الراعي، وتبقى منفصلة عن الباحث.","إنجازات منشورة: اعتماد AAHRPP (2023)، وشهادة GCSA من IAOCR (يونيو 2025، أول شبكة مواقع في المملكة)، وشراكة Flagship Pioneering (نوفمبر 2025)."],
+     en:["Its Clinical Trial Management includes an Investigational Drug Unit, Monitoring and QA, a Phase 1 unit (presented by KAIMRC as the only SFDA-accredited one), and a promotion office.","A CRO works for the sponsor; an SMO works for the site and PI. KAIMRC wears either hat depending on the sponsor, always separate from the PI.","Published achievements: AAHRPP (2023), IAOCR GCSA (June 2025, first site network in KSA), Flagship Pioneering MOU (November 2025)."]},
+  s:{ar:"«الحبيب تحتاج نفس المبدأ: الباحثون في الأقسام من جهة، ومكتب مركزي يدعم الموقع ويشغّل المراقبة المستقلة من جهة أخرى.»",en:"“Al Habib needs the same principle: investigators in departments on one side, a central office supporting the site and running independent monitoring on the other.”"}},
+ {t:{ar:"الأنظمة الرقمية: CTMS و LIMS وغيرها",en:"Digital systems: CTMS, LIMS and more"},
+  b:{ar:["CTMS يدير العمليات (المواقع، المراحل، الاستقطاب، المالية)؛ EDC يجمع بيانات المشاركين. الأول «أين وصلنا؟» والثاني «ماذا وجدنا؟».","CTMS للراعي (Veeva، Medidata، Oracle Siebel) مقابل CTMS للموقع (Advarra OnCore، Clinical Conductor). الحبيب كموقع يحتاج الثاني مرتبطاً بنظام المستشفى.","LIMS يتتبع العينة وسلسلة الحفظ؛ ELN يوثق التجربة؛ CDS يحفظ البيانات الخام من الأجهزة.","مركز التكافؤ: قاعدة متطوعين ← تسجيل مصدري سريري ← LIMS تحليلي حيوي (مثل Watson) ← Phoenix WinNonlin ← SAS أو R.","الامتثال: Part 11، و Annex 11، و GAMP 5، و ICH E6(R3)، ونظام حماية البيانات الشخصية وضوابط NCA للسحابة. مبدأ ALCOA+.","Project Online يتوقف في 30 سبتمبر 2026؛ Project Desktop و Planner مستمران."],
+     en:["CTMS manages operations (sites, milestones, recruitment, finance); EDC collects participant data. “Where are we?” vs “What did we find?”.","Sponsor CTMS (Veeva, Medidata, Oracle Siebel) vs site CTMS (Advarra OnCore, Clinical Conductor). Al Habib as a site needs the latter, linked to the hospital system.","LIMS tracks samples and chain of custody; ELN records experiments; CDS holds raw instrument data.","BE centre: volunteer database → clinical eSource → bioanalytical LIMS (e.g., Watson) → Phoenix WinNonlin → SAS or R.","Compliance: Part 11, Annex 11, GAMP 5, ICH E6(R3), Saudi PDPL and NCA cloud controls. ALCOA+.","Project Online retires 30 September 2026; Project Desktop and Planner continue."]},
+  s:{ar:"أكبر مخاطر الأنظمة ليست في اختيار البرنامج، بل في كتابة المتطلبات بدقة، والتحقق من الصلاحية، والتكامل.",en:"The biggest system risk is not choosing software, but precise requirements, validation, and integration."}}
+];
+
+const CATS={you:{ar:"عنكِ",en:"About you"},eth:{ar:"الأخلاقيات",en:"Ethics"},ct:{ar:"التجارب والتنظيم",en:"Trials & regulation"},be:{ar:"التكافؤ الحيوي",en:"Bioequivalence"},ops:{ar:"التشغيل والحبيب",en:"Operations & Al Habib"}};
+const QS=[
+ {c:"you",q:{ar:"عرّفينا بنفسك.",en:"Tell us about yourself."},a:PITCH},
+ {c:"you",q:{ar:"اشرحي لنا التسلسل الزمني لدراستك وعملك.",en:"Walk us through your education and career timeline."},
+  a:{ar:"ابدئي بالتواريخ الصحيحة بعد تصحيح السيرة، بترتيب زمني واضح. إذا كانت هناك دراسة عن بُعد أو بدوام جزئي تزامنت مع عمل، قوليها صراحة قبل أن يُسأل عنها. الهدوء والوضوح هنا أهم من أي إجابة أخرى، لأن التناقض في التواريخ هو أخطر نقطة في الملف.",en:"Start with the corrected dates, in clear order. If any study was remote or part-time alongside work, say so before being asked. Calm clarity matters most here, because date inconsistencies are the biggest risk in the file."}},
+ {c:"you",q:{ar:"ماذا فعلتِ بين فبراير 2021 ومايو 2023؟",en:"What did you do between February 2021 and May 2023?"},
+  a:{ar:"جهزي إجابة صادقة ومحددة: ما النشاط، وما الذي تعلمتِه منه، وكيف يرتبط بمسارك. إجابة قصيرة وواثقة أفضل من الشرح الطويل.",en:"Prepare an honest, specific answer: the activity, what you learnt, and how it links to your path. Short and confident beats a long explanation."}},
+ {c:"you",q:{ar:"ما طبيعة عملك مع KAIMRC تحديداً؟",en:"What exactly is your work with KAIMRC?"},
+  a:{ar:"أعمل من خلال شركة استشارية في تأسيس وترخيص مركز للتكافؤ الحيوي بالتعاون مع KAIMRC و SFDA، وتشمل مسؤولياتي تخطيط البنية التحتية والامتثال، والإجراءات التشغيلية، والشراء، والتدريب. وأتحفظ على التفاصيل التعاقدية التزاماً بالسرية.",en:"Through a consulting firm, I work on establishing and licensing a bioequivalence centre with KAIMRC and the SFDA, covering infrastructure and compliance planning, operating procedures, procurement, and training. I keep contractual details confidential."}},
+ {c:"you",q:{ar:"ما آخر ورقة نشرتِها، وما دورك فيها؟",en:"What is your latest publication, and what was your role?"},
+  a:{ar:"اذكري اسم المجلة وسنة النشر وترتيبك بين المؤلفين ودورك الفعلي (تصميم، تجارب، تحليل، كتابة). كوني دقيقة: رئيس تحرير سيعرف إن بالغتِ.",en:"Give the journal, year, author position, and your actual role (design, experiments, analysis, writing). Be precise: an editor-in-chief will notice any overstatement."}},
+ {c:"you",q:{ar:"لماذا مجموعة الحبيب؟ ولماذا الآن؟",en:"Why Al Habib, and why now?"},
+  a:{ar:"المجموعة تستثمر بجدية في البحث (جوائز 1.5 مليون ريال، كلية جديدة، توسع في المستشفيات)، وهذا يحتاج بنية تشغيلية تحوّل الطموح البحثي إلى تجارب ومنشورات ممتثلة. وأنا في مرحلة انتقلت فيها من تأسيس مرفق إلى الرغبة في بناء منظومة كاملة داخل مؤسسة كبيرة.",en:"The group is investing seriously in research (SAR 1.5M awards, a new college, hospital expansion), and that needs operational infrastructure to turn ambition into compliant trials and publications. I’m at the point of moving from building one facility to building a full system inside a large institution."}},
+ {c:"eth",q:{ar:"ما المبادئ الأساسية لأخلاقيات البحث؟",en:"What are the core principles of research ethics?"},
+  a:{ar:"احترام الأشخاص (الاستقلالية والموافقة المستنيرة وحماية الفئات الضعيفة)، والإحسان وعدم الإضرار (تبرير الخطر بالمنفعة)، والعدالة في توزيع الأعباء والمنافع. وفي المملكة يحكمها نظام أخلاقيات البحث على المخلوقات الحية ولائحته، مع لجان محلية مسجلة لدى NCBE.",en:"Respect for persons (autonomy, informed consent, protecting the vulnerable), beneficence and non-maleficence (risk justified by benefit), and justice. In KSA they are governed by the Law of Ethics of Research on Living Creatures and its regulations, with local IRBs registered with NCBE."}},
+ {c:"eth",q:{ar:"ما الفرق في الأخلاقيات بين البحث الأساسي والسريري والحيواني؟",en:"How do ethics differ across basic, clinical, and animal research?"},
+  a:{ar:"الأساسي: الخطر على المعلومة، فالتركيز على السرية والموافقة على العينات. السريري: أعلى حماية، موافقة كاملة وتقييم خطر ورقابة من اللجنة والهيئة. الحيواني: لا موافقة، فالأساس هو مبدأ 3Rs: الاستبدال والتقليل والتحسين.",en:"Basic: informational risk, so confidentiality and sample consent. Clinical: highest protection, full consent, risk assessment, IRB and SFDA oversight. Animal: no consent, so the 3Rs: replacement, reduction, refinement."}},
+ {c:"eth",q:{ar:"باحث ضغط عليك لتمرير بروتوكول بسرعة لأن الممول مستعجل. ماذا تفعلين؟",en:"An investigator pressures you to fast-track a protocol for an impatient sponsor. What do you do?"},
+  a:{ar:"لا أتنازل عن المراجعة، لكن أبحث عن السرعة المشروعة: هل الملف مكتمل؟ هل الدراسة مؤهلة لمراجعة مختصرة؟ هل يمكن تشغيل المراجعة العلمية والأخلاقية بالتوازي؟ وأوثق التواصل. السرعة تأتي من جودة العملية، لا من تخطيها.",en:"I don’t compromise the review, but I look for legitimate speed: is the file complete, is expedited review applicable, can scientific and ethical review run in parallel? And I document everything. Speed comes from process quality, not skipping steps."}},
+ {c:"eth",q:{ar:"ما الذي تغير في ICH E6(R3)؟",en:"What changed in ICH E6(R3)?"},
+  a:{ar:"اعتُمد في 6 يناير 2025، ويركز على الجودة من التصميم، ورقابة متناسبة مع المخاطر، ودمج التقنيات مثل المراقبة عن بعد والأجهزة القابلة للارتداء، وتشديد نزاهة البيانات وسجلات التدقيق. وTransCelerate حدّثت معاييرها لتتوافق معه في أبريل 2025، فشهادات R2 لم تعد كافية لكثير من الرعاة.",en:"Adopted 6 January 2025: quality by design, risk-proportionate oversight, integration of remote monitoring and wearables, and stronger data integrity and audit trails. TransCelerate updated its criteria to match in April 2025, so R2 certificates no longer satisfy many sponsors."}},
+ {c:"ct",q:{ar:"اشرحي مراحل التجارب السريرية باختصار.",en:"Briefly explain the clinical trial phases."},
+  a:{ar:"الأولى: السلامة والجرعة والحرائك على 20–100 متطوع سليم. الثانية: فعالية أولية وتحديد الجرعة على عشرات إلى مئات المرضى. الثالثة: تأكيد الفعالية على مئات إلى آلاف، وهي أساس التسجيل. الرابعة: مراقبة ما بعد التسويق والواقع الفعلي.",en:"I: safety, dose, PK in 20–100 healthy volunteers. II: early efficacy and dose-finding in tens to hundreds of patients. III: confirm efficacy in hundreds to thousands; basis for registration. IV: post-marketing and real-world surveillance."}},
+ {c:"ct",q:{ar:"ما المطلوب لتجربة مرحلة أولى في المملكة؟",en:"What does a Phase I trial need in Saudi Arabia?"},
+  a:{ar:"تسجيل في SCTR، وموافقة IRB مسجلة لدى NCBE، وموافقة مسبقة من SFDA خلال 60 يوم عمل بعد اكتمال الملف، وأن تُجرى في وحدة مرحلة أولى معتمدة من الهيئة مع الالتزام بدليل مخاطر أول استخدام على الإنسان، وتدريب GCP لكل الفريق لا يتجاوز ثلاث سنوات.",en:"SCTR registration, NCBE-registered IRB approval, prior SFDA approval within 60 working days of a complete file, conduct in an SFDA-accredited Phase I unit under the first-in-human guideline, and GCP training no older than three years for the whole team."}},
+ {c:"ct",q:{ar:"ما الفرق بين الراعي و CRO والباحث الرئيس؟",en:"What is the difference between the sponsor, CRO, and PI?"},
+  a:{ar:"الراعي يبدأ التجربة ويمولها ويتحمل المسؤولية النهائية. CRO تنفذ مهامه بعقد. الباحث الرئيس مسؤول في الموقع عن سلامة المشاركين ودقة البيانات. والقاعدة: الراعي ينقل المهام ولا ينقل المسؤولية.",en:"The sponsor initiates, funds, and holds ultimate responsibility. The CRO performs its tasks under contract. The PI is accountable on site for participant safety and data accuracy. Rule: the sponsor delegates tasks, never responsibility."}},
+ {c:"ct",q:{ar:"لماذا يجب فصل المراقب عن الفريق البحثي؟",en:"Why must the monitor be separate from the research team?"},
+  a:{ar:"لأن الباحث مسؤول عن التنفيذ والمراقب مسؤول عن التحقق منه. لو اجتمعا فلا أحد يتحقق من الباحث. ودليل SFDA الإصدار 4.0 ينص صراحة على أن المراقب لا يكون من الفريق البحثي.",en:"The PI executes; the monitor verifies. If combined, no one checks the investigator. SFDA v4.0 explicitly states the monitor must not be part of the research team."}},
+ {c:"ct",q:{ar:"ما الذي يميز نموذج KAIMRC في التجارب السريرية؟",en:"What distinguishes the KAIMRC clinical trials model?"},
+  a:{ar:"جهاز مركزي منفصل عن الأقسام السريرية يدعم الباحثين تشغيلياً ويوفر مراقبة مستقلة، مع وحدة مرحلة أولى معتمدة، واعتمادات دولية مثل AAHRPP و GCSA. هذا يجعل المؤسسة جذابة للرعاة الدوليين.",en:"A central function separate from clinical departments, supporting investigators and providing independent monitoring, with an accredited Phase I unit and international accreditations such as AAHRPP and GCSA. That attracts international sponsors."}},
+ {c:"be",q:{ar:"ما التكافؤ الحيوي ومعيار قبوله؟",en:"What is bioequivalence and its acceptance criterion?"},
+  a:{ar:"إثبات أن الدواء الجنيس والمرجعي يصلان للدم بمعدل وكمية متقاربين. يُقبل إذا وقعت فترة الثقة 90% لنسبة المتوسط الهندسي لـ AUC و Cmax ضمن 80.00–125.00%. وهذا لا يعني السماح بفرق 20%.",en:"Showing a generic and reference reach the blood at a similar rate and extent. Accepted if the 90% CI of the GMR for AUC and Cmax is within 80.00–125.00%. That does not mean a 20% difference is allowed."}},
+ {c:"be",q:{ar:"كيف تتعاملين مع دواء عالي التباين؟",en:"How do you handle a highly variable drug?"},
+  a:{ar:"إذا تجاوز التباين داخل الشخص 30%، نستخدم تصميماً متكرراً. وفي إرشادات EMA يمكن توسيع حدود Cmax فقط حتى 69.84–143.19% حسب تباين المرجعي. مع مراجعة ما تطلبه إرشادات SFDA الحالية.",en:"If within-subject CV exceeds 30%, use a replicate design. Under EMA guidance, Cmax limits only may widen up to 69.84–143.19% based on reference variability. Always check current SFDA guidance."}},
+ {c:"be",q:{ar:"اكتشفتِ أن متطوعاً مسجل في دراسة أخرى. ماذا تفعلين؟",en:"You find a volunteer is enrolled in another study. What do you do?"},
+  a:{ar:"أستبعده فوراً حمايةً له ولسلامة البيانات، وأوثق الحالة وأبلغ الباحث ولجنة الأخلاقيات حسب الإجراءات. ثم أعالج السبب: سجل مركزي للمتطوعين وفحص إلزامي قبل التسجيل.",en:"Exclude them immediately to protect them and the data, document it, and inform the PI and IRB per procedure. Then fix the root cause: a central volunteer registry and mandatory pre-enrolment check."}},
+ {c:"be",q:{ar:"ما أهم نظام في مركز التكافؤ الحيوي؟",en:"What is the most important system in a BE centre?"},
+  a:{ar:"LIMS المتخصص للتحليل الحيوي، لأن نتيجة الدراسة تعتمد على دقة التراكيز وسلسلة حفظ العينات. وبعده قاعدة بيانات المتطوعين لحماية المشاركين من التسجيل المتكرر.",en:"The bioanalytical LIMS, because the outcome depends on accurate concentrations and sample chain of custody. Next is the volunteer database, which protects against over-volunteering."}},
+ {c:"ops",q:{ar:"كيف تحسنين زمن مراجعة لجنة الأخلاقيات دون المساس بالجودة؟",en:"How would you cut IRB turnaround without hurting quality?"},
+  a:{ar:"قوائم تحقق ونماذج موحدة، ومراجعة مسبقة لاكتمال الملف، وتصنيف المراجعة حسب الخطر، وتشغيل المراجعة العلمية والأخلاقية بالتوازي للدراسات منخفضة الخطورة، ونظام إلكتروني لتتبع الطلبات، وقياس زمن المراجعة كمؤشر أداء.",en:"Checklists and templates, completeness pre-screening, risk-based review tiers, parallel scientific and ethical review for low-risk studies, an electronic tracking system, and turnaround as a KPI."}},
+ {c:"ops",q:{ar:"دورات GCP مجانية على الإنترنت. لماذا نطلق برنامجاً في الأكاديمية؟",en:"Free GCP courses exist online. Why should the Academy launch one?"},
+  a:{ar:"التميز في ثلاثة: محتوى تنظيمي سعودي باللغتين (SFDA والنظام و NCBE)، وتطبيق عملي في موقع تجارب حقيقي، وساعات تعليم مستمر معتمدة من SCFHS، مع اعتراف دولي عبر TransCelerate. والطلب مستمر لأن SFDA تشترط تدريباً لا يتجاوز ثلاث سنوات.",en:"Three differentiators: Saudi regulatory content in both languages, hands-on practice at a real trial site, and SCFHS-accredited CPD hours, plus international recognition via TransCelerate. Demand is ongoing because the SFDA requires training no older than three years."}},
+ {c:"ops",q:{ar:"ما الفرق بين CTMS و EDC؟ وما الأنظمة التي تحتاجها المجموعة كموقع تجارب؟",en:"CTMS vs EDC? And which systems does the group need as a trial site?"},
+  a:{ar:"CTMS يدير العمليات، و EDC يجمع البيانات السريرية. كحد أدنى: CTMS على مستوى المؤسسة مرتبط بنظام المستشفى، ونظام إلكتروني لطلبات اللجنة، و eISF، ونظام يتتبع صلاحية شهادات GCP. أما EDC و IRT فعادة يوفرها الراعي.",en:"CTMS runs operations; EDC collects clinical data. Minimum: an institution-level CTMS linked to the hospital system, an electronic IRB system, an eISF, and a system tracking GCP validity. EDC and IRT usually come from the sponsor."}},
+ {c:"ops",q:{ar:"ما خطتك لأول 90 يوماً؟",en:"What is your 90-day plan?"},
+  a:{ar:"الشهر الأول: الاستماع وفهم الوضع الحالي، وقياس مؤشرات أساسية مثل زمن المراجعة وعدد الدراسات. الشهر الثاني: تحديد ثلاث فرص سريعة وخطة لها مع أصحاب القرار. الشهر الثالث: تنفيذ أولها، وتقديم تصور لبرنامج التدريب أو المكتب المركزي حسب الأولوية.",en:"Month 1: listen, map the current state, baseline KPIs such as turnaround and study volume. Month 2: agree three quick wins with decision-makers. Month 3: deliver the first, and present a plan for the training programme or central office, whichever is the priority."}},
+ {c:"ops",q:{ar:"أين ترين البحث في الحبيب بعد ثلاث سنوات؟",en:"Where do you see research at Al Habib in three years?"},
+  a:{ar:"موقع تجارب سريرية مرجعي في القطاع الخاص: مكتب مركزي يخدم كل المستشفيات، ولجنة أخلاقيات بزمن مراجعة تنافسي وربما اعتماد دولي، وبرنامج تدريب GCP معترف به، وشراكات مع المصانع المحلية في التكافؤ الحيوي والمرحلة الرابعة.",en:"A reference private-sector trial site: a central office serving all hospitals, a competitive IRB turnaround and perhaps international accreditation, a recognised GCP programme, and partnerships with local manufacturers in BE and Phase IV."}}
+];
+
+const CARDS=[
+ ["SCTR","السجل السعودي للتجارب السريرية؛ التسجيل إلزامي ولا يعني الموافقة","Saudi Clinical Trials Registry; mandatory, not an approval"],
+ ["NCBE","اللجنة الوطنية للأخلاقيات الحيوية في KACST؛ تُسجَّل لديها اللجان المحلية","National Committee of Bioethics at KACST; registers local IRBs"],
+ ["SUSAR","تفاعل خطير غير متوقع مشتبه به؛ يُبلغ خلال 15 يوماً، أو 7 إذا مميت أو مهدد للحياة","Suspected unexpected serious adverse reaction; 15 days, or 7 if fatal/life-threatening"],
+ ["DSUR","تقرير سلامة تطويري سنوي يقدمه الراعي للهيئة","Annual Development Safety Update Report to the SFDA"],
+ ["Cmax","أعلى تركيز في الدم؛ يعكس معدل الامتصاص","Peak blood concentration; rate of absorption"],
+ ["AUC","المساحة تحت منحنى التركيز؛ تعكس كمية الامتصاص","Area under the curve; extent of absorption"],
+ ["GMR","نسبة المتوسط الهندسي بين الاختبار والمرجعي","Geometric mean ratio, test vs reference"],
+ ["HVD","دواء عالي التباين: تباين داخل الشخص ≥ 30%","Highly variable drug: within-subject CV ≥ 30%"],
+ ["Washout","فترة غسيل بين الفترتين؛ عادة ≥ 5 أضعاف عمر النصف","Gap between periods; typically ≥ 5 half-lives"],
+ ["Biowaiver","إعفاء من دراسة بشرية حسب BCS والذوبان","Waiver of human study based on BCS and dissolution"],
+ ["3Rs","استبدال، تقليل، تحسين: أخلاقيات التجارب الحيوانية","Replacement, Reduction, Refinement"],
+ ["Sponsor-Investigator","باحث يبادر بالتجربة دون ممول فيتحمل مسؤوليات الراعي والباحث","An investigator who initiates a trial and carries both roles"],
+ ["CRO","تعمل لصالح الراعي بعقد","Works for the sponsor under contract"],
+ ["SMO","تعمل لصالح الموقع والباحث","Works for the site and investigator"],
+ ["Form 4","إقرار الباحث: رقم SCFHS ورقم تسجيل IRB لدى NCBE والالتزامات","Statement of Investigator: SCFHS number, IRB NCBE number, commitments"],
+ ["Form 3","إفصاح الباحث عن مصالحه المالية مع الراعي","PI financial disclosure"],
+ ["Reliance pathway","تسريع مراجعة SFDA إذا اعتمدت الدراسة FDA أو EMA أو MHRA أو Swissmedic","Faster SFDA review with FDA/EMA/MHRA/Swissmedic approval"],
+ ["PTAP","برنامج الوصول للعلاج بعد انتهاء التجربة؛ يُقدم خلال 60 يوماً قبل الإغلاق","Post-trial access programme; submit 60 days before close-out"],
+ ["IDMC","لجنة مستقلة لمراقبة البيانات","Independent Data Monitoring Committee"],
+ ["TransCelerate","اعتراف متبادل بتدريب GCP عبر إقرار ذاتي من مزود التدريب","Mutual GCP recognition via provider self-attestation"],
+ ["SCFHS CPD","اعتماد مقدم التعليم المستمر ثم اعتماد كل نشاط عبر منصة «مستمر»","CPD provider accreditation, then per-activity via Mustamir"],
+ ["IAOCR","جهة اعتماد دولية لبرامج التدريب والمواقع؛ منحت KAIMRC شهادة GCSA","International accreditor; gave KAIMRC GCSA"],
+ ["CTMS","إدارة عمليات التجارب: مواقع، مراحل، استقطاب، مالية","Trial operations: sites, milestones, recruitment, finance"],
+ ["EDC","جمع بيانات المشاركين إلكترونياً","Electronic participant data capture"],
+ ["LIMS","تتبع العينات وسلسلة الحفظ والنتائج في المختبر","Sample tracking, chain of custody, results"],
+ ["ALCOA+","منسوبة، مقروءة، آنية، أصلية، دقيقة + كاملة، متسقة، دائمة، متاحة","Attributable, Legible, Contemporaneous, Original, Accurate + Complete, Consistent, Enduring, Available"],
+ ["GAMP 5","إطار ISPE للتحقق من الأنظمة الحاسوبية حسب المخاطر","ISPE risk-based computerised system validation"],
+ ["IQ / OQ / PQ","التحقق من التركيب والتشغيل والأداء","Installation, operational, performance qualification"]
+];
+
+const QUIZ=[
+ {q:{ar:"متى صدر دليل SFDA للتجارب السريرية الإصدار 4.0؟",en:"When was SFDA clinical trials guideline v4.0 issued?"},o:["28/06/2026","06/01/2025","14/09/1431","08/07/2015"],c:0,x:{ar:"صدر في 28 يونيو 2026. أما 6 يناير 2025 فتاريخ اعتماد ICH E6(R3).",en:"28 June 2026. 6 January 2025 is when ICH E6(R3) was adopted."}},
+ {q:{ar:"أقصى عمر لتدريب GCP لأعضاء الفريق البحثي حسب SFDA؟",en:"Maximum age of GCP training for team members per SFDA?"},o:{ar:["سنة","سنتان","ثلاث سنوات","خمس سنوات"],en:["1 year","2 years","3 years","5 years"]},c:2,x:{ar:"ثلاث سنوات. الرعاة الدوليون غالباً يطلبون سنتين.",en:"Three years. International sponsors often expect two."}},
+ {q:{ar:"مدة رد الهيئة على طلب دراسة تكافؤ حيوي؟",en:"SFDA response time for a BE study?"},o:{ar:["10 أيام عمل","15 يوم عمل","30 يوم عمل","60 يوم عمل"],en:["10 WD","15 WD","30 WD","60 WD"]},c:1,x:{ar:"15 يوم عمل بعد اكتمال الملف.",en:"15 working days after a complete file."}},
+ {q:{ar:"المرحلة الرابعة على دواء مسجل بنفس الاستطباب تحتاج:",en:"Phase IV on a registered drug, same indication, needs:"},o:{ar:["موافقة كاملة","إخطار وإقرار عبر SCTR","لا شيء","موافقة NCBE فقط"],en:["Full approval","Notification and acknowledgement via SCTR","Nothing","NCBE approval only"]},c:1,x:{ar:"إخطار خلال 20 يوم عمل من موافقة IRB. أما الاستطباب الجديد فيحتاج موافقة كاملة.",en:"Notification within 20 WD of IRB approval. A new indication needs full approval."}},
+ {q:{ar:"أين يجب إجراء تجارب المرحلة الأولى في المملكة؟",en:"Where must Phase I trials be conducted in KSA?"},o:{ar:["أي مستشفى","وحدة مرحلة أولى معتمدة من SFDA","مختبر GLP","خارج المملكة"],en:["Any hospital","An SFDA-accredited Phase I unit","A GLP lab","Abroad"]},c:1,x:{ar:"وحدة معتمدة من الهيئة، مع الالتزام بدليل مخاطر أول استخدام على الإنسان.",en:"An SFDA-accredited unit, following the first-in-human risk guideline."}},
+ {q:{ar:"معيار قبول التكافؤ الحيوي هو فترة ثقة 90% لـ GMR ضمن:",en:"BE acceptance: 90% CI of the GMR within:"},o:["70–130%","80.00–125.00%","90–110%","69.84–143.19%"],c:1,x:{ar:"80.00–125.00% لـ AUC و Cmax. والتوسيع حتى 69.84–143.19% لـ Cmax فقط في الأدوية عالية التباين (EMA).",en:"80.00–125.00% for AUC and Cmax. Widening to 69.84–143.19% applies to Cmax only for HVDs (EMA)."}},
+ {q:{ar:"الدواء عالي التباين هو ما يكون تباينه داخل الشخص:",en:"A highly variable drug has within-subject CV of:"},o:["≥ 10%","≥ 20%","≥ 30%","≥ 50%"],c:2,x:{ar:"30% أو أكثر.",en:"30% or more."}},
+ {q:{ar:"مهلة الإبلاغ عن SUSAR مميت أو مهدد للحياة:",en:"Deadline for a fatal or life-threatening SUSAR:"},o:{ar:["24 ساعة","7 أيام","15 يوماً","30 يوماً"],en:["24 hours","7 days","15 days","30 days"]},c:1,x:{ar:"7 أيام، وتقرير متابعة خلال 8 أيام. وغير المميت خلال 15 يوماً.",en:"7 days, with a follow-up within 8 days. Others within 15 days."}},
+ {q:{ar:"من يتحمل المسؤولية النهائية عن جودة التجربة؟",en:"Who holds ultimate responsibility for trial quality?"},o:{ar:["CRO","الباحث الرئيس","الراعي","لجنة الأخلاقيات"],en:["CRO","PI","Sponsor","IRB"]},c:2,x:{ar:"الراعي، حتى لو فوّض المهام لـ CRO.",en:"The sponsor, even when tasks are delegated to a CRO."}},
+ {q:{ar:"الجهة التي تعمل لصالح الموقع والباحث:",en:"The organisation working for the site and investigator:"},o:["CRO","SMO","IDMC","SRA"],c:1,x:{ar:"SMO. أما CRO فتعمل للراعي.",en:"SMO. A CRO works for the sponsor."}},
+ {q:{ar:"مبدأ 3Rs يخص:",en:"The 3Rs apply to:"},o:{ar:["البحث الأساسي","التجارب السريرية","التجارب الحيوانية","التكافؤ الحيوي"],en:["Basic research","Clinical trials","Animal research","Bioequivalence"]},c:2,x:{ar:"التجارب الحيوانية: استبدال، تقليل، تحسين.",en:"Animal research: replacement, reduction, refinement."}},
+ {q:{ar:"الحد الأدنى لأعضاء اللجنة المحلية حسب النظام:",en:"Minimum local committee members under the law:"},o:["3","5","7","9"],c:1,x:{ar:"خمسة أعضاء على الأقل.",en:"At least five."}},
+ {q:{ar:"متى اعتُمد ICH E6(R3)؟",en:"When was ICH E6(R3) adopted?"},o:["06/01/2025","28/06/2026","04/2025","01/05/1996"],c:0,x:{ar:"6 يناير 2025. وفي أبريل 2025 حدّثت TransCelerate معاييرها لتتوافق معه.",en:"6 January 2025. TransCelerate updated its criteria in April 2025."}},
+ {q:{ar:"كيف تعترف TransCelerate بدورات GCP؟",en:"How does TransCelerate recognise GCP courses?"},o:{ar:["تكتب الدورة وتقدمها","إقرار ذاتي من المزود بمطابقة المعايير الدنيا","اعتماد حكومي","امتحان مركزي"],en:["It writes and delivers them","Provider self-attestation against minimum criteria","Government accreditation","A central exam"]},c:1,x:{ar:"إقرار ذاتي من مزود التدريب. TransCelerate لا تكتب التدريب ولا تقدمه.",en:"Provider self-attestation. TransCelerate neither writes nor delivers training."}},
+ {q:{ar:"أي نظام يجيب عن «أين العينة رقم 1245 وما نتيجتها؟»",en:"Which system answers “where is sample 1245 and what is its result?”"},o:["CTMS","EDC","LIMS","ELN"],c:2,x:{ar:"LIMS.",en:"LIMS."}},
+ {q:{ar:"مجموعة الحبيب كموقع تجارب تحتاج CTMS:",en:"As a trial site, Al Habib needs a CTMS that is:"},o:{ar:["للراعي","على مستوى المؤسسة/الموقع","لا تحتاج","EDC بدلاً منه"],en:["Sponsor-side","Institution/site-level","Not needed","An EDC instead"]},c:1,x:{ar:"على مستوى المؤسسة، مرتبط بنظام المستشفى، ويفصل تكاليف الدراسة عن فاتورة المريض.",en:"Institution-level, linked to the hospital system, separating study costs from patient billing."}},
+ {q:{ar:"إجمالي جوائز البحث العلمي لمجلة الحبيب:",en:"Total Al Habib journal research awards:"},o:{ar:["500 ألف ريال","مليون ريال","1.5 مليون ريال","3 ملايين ريال"],en:["SAR 500k","SAR 1M","SAR 1.5M","SAR 3M"]},c:2,x:{ar:"1.5 مليون ريال، أعلاها 500 ألف لأفضل بحث.",en:"SAR 1.5M; the top prize is 500k."}},
+ {q:{ar:"آلية المراجعة في لجنة أخلاقيات الحبيب:",en:"Al Habib’s review model:"},o:{ar:["أخلاقية فقط","علمية في مركز الأبحاث ثم أخلاقية في اللجنة","عبر SFDA","خارجية"],en:["Ethical only","Scientific at the Research Center, then ethical at the IRB","Via the SFDA","External"]},c:1,x:{ar:"مرحلتان: علمية ثم أخلاقية.",en:"Two steps: scientific, then ethical."}},
+ {q:{ar:"رسوم تقييم ملف التجربة لدى SFDA:",en:"SFDA trial evaluation fee:"},o:{ar:["5,000 ريال","10,000 ريال","15,000 ريال","25,000 ريال"],en:["SAR 5,000","SAR 10,000","SAR 15,000","SAR 25,000"]},c:2,x:{ar:"15,000 ريال؛ تُعفى الحكومية وغير الممولة والمرحلة الرابعة.",en:"SAR 15,000; waived for government, unsponsored, and Phase IV."}},
+ {q:{ar:"متى يتوقف Microsoft Project Online؟",en:"When does Microsoft Project Online retire?"},o:["30/09/2026","01/10/2025","31/12/2026","لن يتوقف"],c:0,x:{ar:"30 سبتمبر 2026، بينما يستمر Project Desktop و Planner.",en:"30 September 2026; Project Desktop and Planner continue."}}
+];
+
+const IDEAS=[
+ {t:{ar:"برنامج تدريب GCP و GLP في الأكاديمية",en:"GCP and GLP training at the Academy"},
+  why:{ar:"SFDA تشترط تدريب GCP لا يتجاوز ثلاث سنوات لكل الفريق، والرعاة انتقلوا إلى R3، ومراكز التكافؤ تحتاج GLP.",en:"The SFDA requires GCP training no older than three years; sponsors moved to R3; BE centres need GLP."},
+  how:{ar:["المرحلة الأولى (0–6 أشهر): مسار GCP أساسي وتجديدي بساعات SCFHS لفرق المجموعة.","المرحلة الثانية (6–12): مطابقة المنهج وإقرار TransCelerate، ومسارات حسب الدور، والفتح للخارج.","المرحلة الثالثة (12–24): GLP و GCLP بالشراكة، واعتماد IAOCR.","التميز: محتوى سعودي باللغتين، وتطبيق عملي، وساعات CPD."],en:["Phase 1 (0–6 months): GCP foundation and refresher with SCFHS hours for internal teams.","Phase 2 (6–12): curriculum mapping and TransCelerate attestation, role-based tracks, open externally.","Phase 3 (12–24): GLP and GCLP with a partner; IAOCR accreditation.","Edge: Saudi content in both languages, hands-on practice, CPD hours."]},
+  say:{ar:"«اشتراط SFDA الجديد مع انتقال الرعاة إلى R3 خلق طلباً مستمراً. أقترح برنامجاً يجمع الاعتراف الدولي مع الأنظمة السعودية باللغتين، يبدأ بفرق المجموعة ثم يُفتح للخارج.»",en:"“The new SFDA rule and sponsors’ move to R3 created ongoing demand. I propose a programme combining international recognition with Saudi regulations in both languages, starting internally, then opening externally.”"}},
+ {t:{ar:"مكتب مركزي للتجارب السريرية",en:"A central clinical trials office"},
+  why:{ar:"المجموعة تتوسع بمستشفيات جديدة، وكل مستشفى موقع محتمل. والمراقبة يجب أن تكون مستقلة عن الباحث.",en:"The group is adding hospitals, each a potential site; monitoring must be independent of investigators."},
+  how:{ar:["دعم الموقع: منسقون، واستقطاب، وصيدلية للدواء التجريبي.","مراقبة وضمان جودة مستقلان.","CTMS مؤسسي مرتبط بنظام المستشفى يفصل تكاليف الدراسة.","عقود وميزانيات موحدة لتسريع التفعيل."],en:["Site support: coordinators, recruitment, investigational pharmacy.","Independent monitoring and QA.","An institutional CTMS linked to the hospital system, separating study costs.","Standard contracts and budgets to speed activation."]},
+  say:{ar:"«الباحثون في الأقسام من جهة، ومكتب مركزي يدعم الموقع ويشغّل المراقبة المستقلة من جهة أخرى. هذا ما يجعل المؤسسة جذابة للرعاة.»",en:"“Investigators in departments, and a central office that supports the site and runs independent monitoring. That is what attracts sponsors.”"}},
+ {t:{ar:"تسريع دورة مراجعة لجنة الأخلاقيات",en:"Faster IRB review cycle"},
+  why:{ar:"المراجعة على مرحلتين ممتازة للجودة لكنها قد تطيل زمن البدء، والرعاة يقيسون زمن التفعيل.",en:"Two-step review is great for quality but can delay start-up, and sponsors measure activation time."},
+  how:{ar:["قوائم تحقق ونماذج موحدة ومراجعة مسبقة للاكتمال.","تشغيل المرحلتين بالتوازي للدراسات منخفضة الخطورة.","نظام إلكتروني لتتبع الطلبات.","زمن المراجعة كمؤشر أداء، وهدف استراتيجي لاعتماد AAHRPP."],en:["Checklists, templates, completeness pre-screening.","Parallel review for low-risk studies.","An electronic tracking system.","Turnaround as a KPI, and AAHRPP as a strategic goal."]},
+  say:{ar:"«الجوائز والكلية الجديدة ستزيد الطلبات على اللجنة. ضبط العملية الآن يحافظ على الجودة ويرفع جاذبية المجموعة للرعاة.»",en:"“The awards and the new college will increase IRB demand. Tightening the process now protects quality and makes the group more attractive to sponsors.”"}}
+];
+
+const CHECK=[
+ {g:{ar:"تصحيح السيرة الذاتية (الأولوية القصوى)",en:"Fix the CV (top priority)"},items:[
+  {ar:"تصحيح تسلسل تواريخ الشهادات (الدكتوراه 2010 قبل البكالوريوس 2017)",en:"Fix degree date order (PhD 2010 before BSc 2017)"},
+  {ar:"توضيح تداخل ACE Biotech (حتى 12/2019) مع UQAM (من 01/2019) وماجستير نايف 2020",en:"Clarify the ACE Biotech / UQAM / Naif MSc overlaps"},
+  {ar:"تجهيز إجابة للفجوة من 02/2021 إلى 05/2023",en:"Prepare an answer for the 02/2021–05/2023 gap"},
+  {ar:"توحيد مسمى الدكتوراه (Chemistry أو Nanochemistry)",en:"Make the PhD title consistent"},
+  {ar:"إضافة المجلات وترتيب المؤلفين و DOI للمنشورات، ورابط Google Scholar أو ORCID",en:"Add journals, author order, DOIs, and a Scholar/ORCID link"},
+  {ar:"تصحيح Bioprespecting و DNA/RNA electroscopes",en:"Fix “Bioprespecting” and “electroscopes” typos"},
+  {ar:"التأكد أن وصف دورها الحالي يطابق الواقع حرفياً",en:"Ensure the current role description is exactly accurate"}]},
+ {g:{ar:"الشهادات والوثائق",en:"Certificates and documents"},items:[
+  {ar:"تجديد GCP (انتهت في أغسطس 2026) بدورة مبنية على E6(R3)",en:"Renew GCP (expired Aug 2026) with an E6(R3) course"},
+  {ar:"تجديد GLP (تنتهي سبتمبر 2026)",en:"Renew GLP (expires Sep 2026)"},
+  {ar:"تجهيز معادلة الشهادات، خصوصاً MBA من EIU",en:"Have degree equivalencies ready, especially the EIU MBA"},
+  {ar:"طباعة نسخ من السيرة المصححة وقائمة المنشورات والشهادات",en:"Print the corrected CV, publication list, and certificates"}]},
+ {g:{ar:"التحقق قبل المقابلة",en:"Verify before the interview"},items:[
+  {ar:"التأكد من مسمى د. زياد الإداري الحالي في المجموعة",en:"Confirm Dr. Ziad’s current administrative title"},
+  {ar:"التأكد من المسمى الوظيفي الذي تتقدم له",en:"Confirm the exact role being interviewed for"},
+  {ar:"التحقق من وضع لجنة الأخلاقيات الحالي (research.center@drsulaimanalhabib.com)",en:"Check the IRB’s current status (research.center@drsulaimanalhabib.com)"},
+  {ar:"مراجعة قائمة TransCelerate قبل أي ادعاء عن مراكز التدريب في المملكة",en:"Check TransCelerate’s list before any claim about KSA training centres"},
+  {ar:"مراجعة دليل التكافؤ الحيوي الحالي من SFDA",en:"Review the current SFDA BE guideline"}]},
+ {g:{ar:"التدريب",en:"Practice"},items:[
+  {ar:"قول التعريف بالنفس بصوت عالي 5 مرات بالعربي والإنجليزي",en:"Say the pitch aloud five times in Arabic and English"},
+  {ar:"إكمال محاكاة المقابلة كاملة مرتين",en:"Complete the full mock interview twice"},
+  {ar:"الحصول على 80% أو أكثر في الاختبار",en:"Score 80% or more on the quiz"},
+  {ar:"مراجعة كل بطاقات الحفظ",en:"Review all flashcards"},
+  {ar:"حفظ صياغة المقترحات الثلاثة",en:"Memorise the three proposal lines"}]},
+ {g:{ar:"يوم المقابلة",en:"Interview day"},items:[
+  {ar:"مراجعة «ورقة اليوم الأخير» قبل ساعة",en:"Review the final-day sheet an hour before"},
+  {ar:"الوصول مبكراً بلباس رسمي",en:"Arrive early, dressed formally"},
+  {ar:"الاستعداد للتحول للإنجليزية في أي لحظة",en:"Be ready to switch to English at any moment"},
+  {ar:"تجهيز الأسئلة الخمسة للمحاور",en:"Have the five questions ready"}]}
+];
+
+/* ================= STUDY LESSONS ================= */
+const LESSONS=[
+{id:"eth",t:{ar:"الدرس 1: أخلاقيات البحث العلمي",en:"Lesson 1: Research ethics"},
+ goal:{ar:"بعد هذا الدرس تستطيعين شرح هدف الأخلاقيات ومبادئها، والنظام السعودي، وأنواع مراجعة اللجنة، وعناصر الموافقة المستنيرة.",en:"After this lesson you can explain the purpose and principles of research ethics, the Saudi framework, IRB review types, and informed consent elements."},
+ b:[
+ {k:"h",ar:"ما هي أخلاقيات البحث؟",en:"What is research ethics?"},
+ {k:"p",ar:"أخلاقيات البحث منظومة مبادئ وضوابط تحكم إجراء البحوث على الإنسان وعيّناته وبياناته، وعلى الحيوان. فكرتها الأساسية بسيطة: الباحث يطلب من إنسان أن يتحمل شيئاً من الخطر أو الإزعاج من أجل معرفة ستفيد غيره غالباً، وهذا يحتاج ضمانات تحمي هذا الإنسان. لذلك تكون سلامة المشارك وكرامته وحقوقه مقدَّمة دائماً على مصلحة العلم أو الممول.",en:"Research ethics is the set of principles and controls governing research on humans, their samples and data, and on animals. The core idea is simple: a researcher asks a person to accept some risk or burden for knowledge that will mostly benefit others, which requires safeguards. So participant safety, dignity, and rights always come before science or sponsor interests."},
+ {k:"p",ar:"وللأخلاقيات هدف ثانٍ لا يقل أهمية: أن تكون النتائج موثوقة. بحث بُني على بيانات مزورة أو مشاركين لم يفهموا ما وافقوا عليه يضر المرضى مرتين: مرة بالمخاطرة بهم، ومرة بقرارات علاجية مبنية على نتائج خاطئة.",en:"Ethics has a second, equally important aim: credible results. Research built on fabricated data or participants who did not understand what they agreed to harms patients twice: once through the risk, and again through treatment decisions based on false results."},
+ {k:"h",ar:"المبادئ الثلاثة (تقرير Belmont)",en:"The three principles (Belmont Report)"},
+ {k:"tbl",h:{ar:["المبدأ","معناه","كيف يُطبَّق"],en:["Principle","Meaning","How it is applied"]},
+  r:{ar:[["احترام الأشخاص","كل إنسان مستقل في قراره، ومن لا يملك القدرة الكاملة يحتاج حماية إضافية","الموافقة المستنيرة، وحق الانسحاب، وموافقة الولي للقاصرين وناقصي الأهلية"],["الإحسان وعدم الإضرار","تعظيم المنفعة وتقليل الضرر","تقييم الخطر مقابل المنفعة قبل البدء وأثناء الدراسة، ولجان مراقبة البيانات"],["العدالة","توزيع أعباء البحث ومنافعه بإنصاف","عدم استهداف فئة ضعيفة لأنها سهلة الاستقطاب، وعدم حرمان فئة من المشاركة بلا سبب"]],
+     en:[["Respect for persons","Everyone is autonomous; those with reduced capacity need extra protection","Informed consent, right to withdraw, guardian consent for minors and those lacking capacity"],["Beneficence / non-maleficence","Maximise benefit, minimise harm","Risk-benefit assessment before and during the study; data monitoring committees"],["Justice","Fair distribution of research burdens and benefits","Not targeting vulnerable groups because they are easy to recruit; not excluding groups without reason"]]}},
+ {k:"p",ar:"وإعلان هلسنكي الصادر عن الجمعية الطبية العالمية هو المرجع الدولي الآخر، ويؤكد أن مصلحة المشارك الفرد تتقدم على مصلحة العلم والمجتمع.",en:"The World Medical Association’s Declaration of Helsinki is the other international reference, stating that the individual participant’s interest takes precedence over science and society."},
+ {k:"h",ar:"النظام السعودي",en:"The Saudi framework"},
+ {k:"ul",ar:["نظام أخلاقيات البحث على المخلوقات الحية: صدر بالمرسوم الملكي م/59 بتاريخ 14/9/1431هـ (24/08/2010م)، ويعرّف المخلوق الحي بأنه الإنسان والحيوان والنبات.","يُلزم كل منشأة بحثية بتشكيل لجنة محلية من خمسة أعضاء على الأقل، من مهامها: التأكد من موافقة البحث للأنظمة، وصحة إجراءات الموافقة بعد التبصير، والموافقة الأخلاقية على البحث، والمتابعة الدورية.","يعرّف الباحث بأنه شخص مؤهل علمياً في موضوع البحث وحاصل على دورة أخلاقيات البحث. أي أن دورة الأخلاقيات شرط نظامي.","اللجنة الوطنية للأخلاقيات الحيوية (NCBE) في مدينة الملك عبدالعزيز للعلوم والتقنية: تُسجَّل لديها اللجان المحلية وتراقب أداءها.","اللائحة التنفيذية للنظام عُدّلت، ومن التعديلات أن الباحث في التجارب السريرية يقدم للجنة تقريراً كل ثلاثة أشهر، وفي البحوث الأخرى خلال مدة لا تزيد على 12 شهراً."],
+  en:["Law of Ethics of Research on Living Creatures: Royal Decree M/59 dated 14/9/1431H (24 August 2010); defines living creatures as humans, animals, and plants.","Every research institution must form a local committee of at least five members, responsible for regulatory compliance, validity of informed consent, ethical approval, and periodic follow-up.","A researcher is defined as someone qualified in the research subject who has completed a research ethics course, so the ethics course is a legal requirement.","The National Committee of Bioethics (NCBE) at KACST registers local committees and monitors their performance.","The implementing regulations were amended; among the changes, clinical trial investigators report to the committee every three months, and other research within 12 months."]},
+ {k:"h",ar:"أنواع مراجعة اللجنة",en:"Types of IRB review"},
+ {k:"tbl",h:{ar:["النوع","متى يُستخدم","مثال"],en:["Type","When used","Example"]},
+  r:{ar:[["إعفاء (Exempt)","خطر أدنى جداً ولا يمس خصوصية المشارك","استبانة مجهولة الهوية عن الرضا"],["مراجعة مختصرة (Expedited)","خطر لا يتجاوز الحد الأدنى، يراجعها عضو أو أكثر دون اجتماع كامل","مراجعة سجلات بأثر رجعي ببيانات مجهولة الهوية"],["مراجعة كاملة (Full Board)","أي خطر أعلى من الحد الأدنى","تجربة سريرية على دواء"]],
+     en:[["Exempt","Very minimal risk, no privacy impact","Anonymous satisfaction survey"],["Expedited","No more than minimal risk; reviewed by one or more members without a full meeting","Retrospective review of de-identified records"],["Full board","Anything above minimal risk","A drug clinical trial"]]}},
+ {k:"note",ar:"مثال من الحبيب نفسها: دراسة حديثة حصلت على موافقة لجنة الحبيب برقم RC 25.08.75، والدراسة كانت بأثر رجعي على بيانات مختبرية مجهولة الهوية، فأعفت اللجنة الباحثين من شرط الموافقة المستنيرة. هذا تطبيق عملي لفكرة تصنيف المراجعة حسب الخطر.",en:"An example from Al Habib itself: a recent study received IRB approval RC 25.08.75. It was a retrospective analysis of de-identified lab data, so the IRB waived informed consent. That is risk-based review in practice."},
+ {k:"h",ar:"عناصر الموافقة المستنيرة",en:"Elements of informed consent"},
+ {k:"p",ar:"الموافقة المستنيرة ليست توقيعاً على ورقة، بل عملية تبدأ بشرح واضح وتستمر طوال الدراسة. يجب أن يفهم المشارك:",en:"Informed consent is not a signature on a form; it is a process that starts with a clear explanation and continues throughout the study. The participant must understand:"},
+ {k:"ul",ar:["هدف الدراسة ومدتها وما سيُطلب منه تحديداً.","المخاطر والإزعاجات المتوقعة، والمنافع المحتملة إن وُجدت.","البدائل المتاحة له خارج الدراسة.","كيف تُحفظ بياناته وسريتها.","التعويض إن وُجد، والعلاج في حال الضرر.","أن المشاركة طوعية، وأنه يستطيع الانسحاب في أي وقت دون أن يتأثر علاجه.","بمن يتواصل إذا كان لديه سؤال أو شكوى.","ودليل SFDA يطلب نموذج الموافقة بالعربي والإنجليزي."],
+  en:["The study’s purpose, duration, and exactly what is asked of them.","Expected risks and discomforts, and any possible benefits.","Alternatives available outside the study.","How their data are stored and kept confidential.","Any compensation, and care in case of injury.","That participation is voluntary and they can withdraw at any time without affecting their care.","Whom to contact with questions or complaints.","The SFDA requires the consent form in Arabic and English."]},
+ {k:"h",ar:"الممارسة السريرية الجيدة ICH E6(R3)",en:"Good Clinical Practice: ICH E6(R3)"},
+ {k:"p",ar:"GCP معيار دولي للأخلاق والجودة العلمية في تصميم التجارب وإجرائها وتسجيلها والإبلاغ عنها. الإصدار الثالث اعتُمد في 6 يناير 2025، وهو أكبر تحديث منذ ثلاثة عقود. أبرز ما فيه: الجودة من التصميم (تحديد المخاطر من البداية)، ورقابة متناسبة مع الخطر بدلاً من مراقبة كل شيء بنفس الدرجة، ودمج التقنيات الحديثة كالمراقبة عن بعد، وتشديد نزاهة البيانات وسجلات التدقيق.",en:"GCP is the international ethical and scientific quality standard for designing, conducting, recording, and reporting trials. The third revision was adopted on 6 January 2025, the biggest update in three decades. Highlights: quality by design (identify risks upfront), risk-proportionate oversight instead of checking everything equally, integration of technologies such as remote monitoring, and stronger data integrity and audit trails."},
+ {k:"warn",ar:"خطأ شائع: القول إن الأخلاقيات «تعطل البحث». الصحيح أن التأخير يُعالج بتحسين العملية (نماذج موحدة، ومراجعة مسبقة للاكتمال، وتصنيف حسب الخطر)، وليس بتخفيف المعايير.",en:"Common mistake: saying ethics “slows research down”. Delays are fixed by improving the process (templates, completeness checks, risk tiers), never by lowering standards."}
+ ],
+ self:[
+  {q:{ar:"ما المبادئ الثلاثة لتقرير Belmont؟",en:"What are the three Belmont principles?"},a:{ar:"احترام الأشخاص، والإحسان وعدم الإضرار، والعدالة.",en:"Respect for persons, beneficence/non-maleficence, justice."}},
+  {q:{ar:"ما الحد الأدنى لأعضاء اللجنة المحلية حسب النظام السعودي، ومن يسجلها؟",en:"Minimum local committee size under Saudi law, and who registers it?"},a:{ar:"خمسة أعضاء على الأقل، وتُسجَّل لدى NCBE في KACST.",en:"At least five members; registered with NCBE at KACST."}},
+  {q:{ar:"دراسة استبانة مجهولة الهوية عن رضا المرضى: ما نوع المراجعة المتوقع؟",en:"An anonymous patient satisfaction survey: which review type?"},a:{ar:"إعفاء أو مراجعة مختصرة، لأن الخطر أدنى جداً.",en:"Exempt or expedited, as the risk is minimal."}}
+ ]},
+{id:"cmp",t:{ar:"الدرس 2: الأخلاقيات في البحث الأساسي والسريري والحيواني",en:"Lesson 2: Ethics in basic, clinical, and animal research"},
+ goal:{ar:"تفرقين بين الأنواع الثلاثة: من يتحمل الخطر، وما نوعه، ومن يراقب.",en:"Distinguish the three types: who bears the risk, what kind, and who oversees."},
+ b:[
+ {k:"p",ar:"الأنواع الثلاثة تخضع لنفس النظام ونفس نوع اللجنة، لكن الفرق في ثلاثة أسئلة: من المعرَّض للخطر؟ وما نوع الخطر؟ وكم مستوى الرقابة المطلوب؟",en:"All three fall under the same law and committee type, but differ on three questions: who is at risk, what kind of risk, and how much oversight is needed."},
+ {k:"h",ar:"1. البحث الأساسي",en:"1. Basic research"},
+ {k:"p",ar:"بحث مخبري لا يتدخل في جسم الإنسان: خلايا، عينات مخزنة، بيانات، تحاليل جزيئية. الخطر الجسدي شبه معدوم، والخطر الحقيقي في المعلومة. مثال: بحث يستخدم عينات دم مخزنة لدراسة جين معين. المشارك لن يتأذى جسدياً، لكن لو تسربت نتيجته الوراثية فقد تكشف معلومات عنه وعن عائلته.",en:"Lab research with no intervention on the body: cells, stored samples, data, molecular work. Physical risk is negligible; the real risk is informational. Example: using stored blood samples to study a gene. The participant is not physically harmed, but a leaked genetic result could reveal information about them and their family."},
+ {k:"ul",ar:["الموافقة على استخدام العينات والبيانات، وقد تكون موسّعة (Broad Consent) للاستخدام المستقبلي في البنوك الحيوية.","السرية وحماية البيانات، خاصة الوراثية.","تصدير العينات للخارج يحتاج إذناً من اللجنة المحلية.","الرقابة: اللجنة المحلية، غالباً مراجعة مختصرة، ولا تحتاج SFDA إلا إذا أُعطي مستحضر لإنسان."],
+  en:["Consent for sample and data use, possibly broad consent for future biobank use.","Confidentiality and data protection, especially genetic data.","Exporting samples abroad needs local committee permission.","Oversight: local committee, often expedited; no SFDA unless a product is given to humans."]},
+ {k:"h",ar:"2. التجارب السريرية",en:"2. Clinical trials"},
+ {k:"p",ar:"تدخل مباشر على الإنسان بمستحضر أو إجراء لم تثبت سلامته أو فعاليته. هنا أعلى مستوى حماية، لأن الخطر جسدي ومباشر.",en:"Direct intervention in humans with a product or procedure not yet proven safe or effective. This carries the highest protection, since the risk is physical and direct."},
+ {k:"ul",ar:["موافقة مستنيرة كاملة بلغة يفهمها المشارك، مع حق الانسحاب.","تقييم الخطر مقابل المنفعة، ولجنة مستقلة لمراقبة البيانات عند الحاجة.","حماية الفئات الضعيفة، وتأمين المشاركين، والإفصاح عن تضارب مصالح الباحث.","الإبلاغ عن الأحداث الضائرة في مدد محددة، والوصول للعلاج بعد انتهاء التجربة.","الرقابة ثلاثية: اللجنة المحلية + SFDA + التسجيل في SCTR."],
+  en:["Full informed consent in an understood language, with the right to withdraw.","Risk-benefit assessment and an independent data monitoring committee where needed.","Protection of vulnerable groups, participant insurance, investigator conflict-of-interest disclosure.","Adverse event reporting within set deadlines; post-trial access to treatment.","Threefold oversight: local IRB + SFDA + SCTR registration."]},
+ {k:"h",ar:"3. التجارب الحيوانية",en:"3. Animal research"},
+ {k:"p",ar:"المعرَّض للخطر هو الحيوان، ولا توجد موافقة مستنيرة. فالأخلاقيات تقوم على تبرير استخدام الحيوان وتقليل معاناته، بمبدأ 3Rs:",en:"The animal bears the risk and cannot consent, so ethics rests on justifying use and minimising suffering through the 3Rs:"},
+ {k:"tbl",h:{ar:["المبدأ","المعنى","مثال"],en:["Principle","Meaning","Example"]},
+  r:{ar:[["الاستبدال (Replacement)","بدائل عن الحيوان متى أمكن","نماذج خلوية أو محاكاة حاسوبية"],["التقليل (Reduction)","أقل عدد يحقق دلالة إحصائية","حساب حجم العينة إحصائياً قبل البدء"],["التحسين (Refinement)","تقليل الألم والضغط","تخدير ومسكنات ونقاط إنهاء إنسانية ورعاية بيطرية"]],
+     en:[["Replacement","Alternatives where possible","Cell models or computer simulation"],["Reduction","Fewest animals for statistical validity","Calculating sample size beforehand"],["Refinement","Minimise pain and distress","Anaesthesia, analgesia, humane endpoints, veterinary care"]]}},
+ {k:"p",ar:"واللائحة التنفيذية تطلب في مشروع البحث الحيواني: نوع الحيوان ومصدره وعدده، وآلية تمييز كل حيوان وحفظ سجله، وخطط الطوارئ. ولا تحتاج التجربة الحيوانية موافقة SFDA، لكن إذا كانت نتائجها ستُقدَّم في ملف تجربة سريرية فيجب أن تكون وفق GLP.",en:"The regulations require animal proposals to state species, source, number, identification and records, and emergency plans. No SFDA approval is needed for the animal study, but GLP applies if results will support a clinical trial application."},
+ {k:"tbl",h:{ar:["","الأساسي","السريري","الحيواني"],en:["","Basic","Clinical","Animal"]},
+  r:{ar:[["المعرَّض للخطر","المعلومة والخصوصية","جسد المشارك","الحيوان"],["الموافقة","على العينة والبيانات","مستنيرة كاملة","لا تنطبق"],["المبدأ الحاكم","السرية","الخطر مقابل المنفعة و GCP","3Rs"],["الرقابة","اللجنة (مختصرة غالباً)","اللجنة + SFDA + SCTR","اللجنة أو لجنة رعاية الحيوان"],["التقرير الدوري للجنة","خلال 12 شهراً","كل 3 أشهر","دوري"]],
+     en:[["Who bears risk","Information, privacy","Participant’s body","The animal"],["Consent","For samples/data","Full informed","N/A"],["Principle","Confidentiality","Risk vs benefit; GCP","3Rs"],["Oversight","IRB (often expedited)","IRB + SFDA + SCTR","IRB or animal committee"],["Report to IRB","Within 12 months","Every 3 months","Periodic"]]}}
+ ],
+ self:[
+  {q:{ar:"لماذا يُعد الخطر في البحث الأساسي «معلوماتياً»؟",en:"Why is basic research risk “informational”?"},a:{ar:"لأنه لا تدخل في الجسد، والضرر المحتمل هو كشف بيانات المشارك، خاصة الوراثية.",en:"No bodily intervention; the possible harm is disclosure of the participant’s data, especially genetic."}},
+  {q:{ar:"اذكري مبدأ 3Rs مع مثال لكل عنصر.",en:"State the 3Rs with an example each."},a:{ar:"الاستبدال (نماذج خلوية)، والتقليل (حساب حجم العينة)، والتحسين (تخدير ونقاط إنهاء إنسانية).",en:"Replacement (cell models), Reduction (sample size calculation), Refinement (anaesthesia, humane endpoints)."}},
+  {q:{ar:"متى تحتاج التجربة الحيوانية أن تكون وفق GLP؟",en:"When must an animal study follow GLP?"},a:{ar:"عندما تُستخدم نتائجها في ملف تنظيمي، مثل ملف تجربة سريرية لدى SFDA.",en:"When its results support a regulatory file, such as a clinical trial application to the SFDA."}}
+ ]},
+{id:"ph",t:{ar:"الدرس 3: التجارب السريرية ومراحلها",en:"Lesson 3: Clinical trials and their phases"},
+ goal:{ar:"تشرحين مفاهيم تصميم التجربة الأساسية، وكل مرحلة بهدفها ومشاركيها وتحدياتها التشغيلية.",en:"Explain core trial design concepts and each phase’s aim, participants, and operational challenges."},
+ b:[
+ {k:"h",ar:"مفاهيم أساسية قبل المراحل",en:"Core concepts first"},
+ {k:"tbl",h:{ar:["المفهوم","المعنى"],en:["Concept","Meaning"]},
+  r:{ar:[["البروتوكول","الوثيقة التي تصف هدف التجربة وتصميمها ومنهجها وتحليلها وتنظيمها"],["العشوائية (Randomisation)","توزيع المشاركين على المجموعات بالصدفة لمنع التحيز"],["التعمية (Blinding)","إخفاء نوع العلاج عن المشارك (مفردة) أو عنه وعن الباحث (مزدوجة)"],["المجموعة الضابطة","مجموعة تأخذ علاجاً وهمياً أو العلاج القياسي للمقارنة"],["المعيار الأولي (Primary Endpoint)","النتيجة الرئيسية التي تُقاس بها فعالية العلاج"],["معايير الاشتمال والاستبعاد","من يحق له المشاركة ومن لا يحق"],["الانحراف عن البروتوكول","أي خروج عن البروتوكول المعتمد، ويجب توثيقه والإبلاغ عنه"],["كتيب الباحث (IB)","ملخص كل المعلومات السريرية وقبل السريرية عن المستحضر"]],
+     en:[["Protocol","Document describing the trial’s objectives, design, methods, analysis, and organisation"],["Randomisation","Allocating participants to groups by chance to prevent bias"],["Blinding","Hiding treatment from the participant (single) or participant and investigator (double)"],["Control group","Receives placebo or standard treatment for comparison"],["Primary endpoint","The main outcome used to judge efficacy"],["Inclusion / exclusion","Who may and may not take part"],["Protocol deviation","Any departure from the approved protocol; must be documented and reported"],["Investigator’s Brochure (IB)","Summary of all clinical and non-clinical data on the product"]]}},
+ {k:"h",ar:"المرحلة الصفرية (Phase 0)",en:"Phase 0"},
+ {k:"p",ar:"جرعات دقيقة جداً على عدد قليل لاستكشاف سلوك الدواء في الجسم قبل المرحلة الأولى. ليست إلزامية.",en:"Micro-doses in a few people to explore drug behaviour before Phase I. Not mandatory."},
+ {k:"h",ar:"المرحلة الأولى (Phase I)",en:"Phase I"},
+ {k:"ul",ar:["الهدف: السلامة والتحمل وتحديد الجرعة الآمنة، ودراسة الحرائك الدوائية: كيف يمتص الجسم الدواء ويوزعه ويستقلبه ويطرحه.","المشاركون: عادة 20–100 متطوع سليم. في أدوية الأورام يكونون مرضى لأن الدواء سام بطبيعته.","التصاميم: الجرعة المفردة المتصاعدة (SAD)، والمتعددة المتصاعدة (MAD)، وتأثير الطعام.","التشغيل: وحدة مبيت ومراقبة 24 ساعة، وجاهزية طوارئ، وسحب عينات بتوقيت دقيق، وسلسلة حفظ العينات، وسجل متطوعين.","في المملكة: يجب أن تُجرى في وحدة مرحلة أولى معتمدة من SFDA."],
+  en:["Aim: safety, tolerability, safe dose, and pharmacokinetics (absorption, distribution, metabolism, excretion).","Participants: usually 20–100 healthy volunteers; in oncology, patients.","Designs: single ascending dose (SAD), multiple ascending dose (MAD), food effect.","Operations: overnight unit with 24-hour monitoring, emergency readiness, time-critical sampling, chain of custody, volunteer registry.","In KSA: must be conducted in an SFDA-accredited Phase I unit."]},
+ {k:"h",ar:"المرحلة الثانية (Phase II)",en:"Phase II"},
+ {k:"ul",ar:["الهدف: مؤشرات أولية على الفعالية، وتحديد الجرعة المثلى (Dose-ranging)، واستمرار تقييم السلامة.","المشاركون: عشرات إلى بضع مئات من المرضى.","غالباً عشوائية ومقارنة، وقد تُقسم إلى IIa لإثبات المفهوم و IIb لتحديد الجرعة.","التشغيل: استقطاب مرضى بمعايير دقيقة، وتنسيق بين الأقسام، وإدارة الدواء التجريبي من الاستلام إلى المحاسبة عليه."],
+  en:["Aim: early efficacy signals, optimal dose (dose-ranging), continued safety.","Participants: tens to a few hundred patients.","Often randomised and controlled; may split into IIa (proof of concept) and IIb (dose-finding).","Operations: precise patient recruitment, cross-department coordination, investigational product management from receipt to accountability."]},
+ {k:"h",ar:"المرحلة الثالثة (Phase III)",en:"Phase III"},
+ {k:"ul",ar:["الهدف: تأكيد الفعالية على نطاق واسع ومقارنة الدواء بالعلاج القياسي، ورصد الآثار الأقل شيوعاً. هي الأساس لطلب التسجيل (Pivotal).","المشاركون: مئات إلى آلاف، غالباً في مراكز ودول متعددة.","التشغيل: إدارة مواقع متعددة، وعقود وميزانيات، ومراقبة مبنية على المخاطر، وجودة بيانات عالية، وجاهزية دائمة للتفتيش."],
+  en:["Aim: confirm efficacy at scale versus standard treatment and detect less common effects; the pivotal basis for registration.","Participants: hundreds to thousands, often multi-site and multi-country.","Operations: multi-site management, contracts and budgets, risk-based monitoring, high data quality, constant inspection readiness."]},
+ {k:"h",ar:"المرحلة الرابعة (Phase IV)",en:"Phase IV"},
+ {k:"ul",ar:["الهدف: مراقبة الدواء بعد تسويقه، ورصد الآثار النادرة وطويلة المدى، ودراسة الاستخدام الفعلي في فئات لم تُدرس.","التشغيل: اليقظة الدوائية، والسجلات المرضية، والدراسات على البيانات الروتينية.","فرصة كبيرة لمستشفيات بحجم الحبيب لكثرة المرضى والبيانات."],
+  en:["Aim: post-marketing surveillance of rare and long-term effects and real-world use in unstudied groups.","Operations: pharmacovigilance, registries, studies on routine data.","A major opportunity for a hospital group of Al Habib’s size, given patient and data volume."]},
+ {k:"note",ar:"ربط مهم: دراسات التكافؤ الحيوي تصميمها قريب من المرحلة الأولى، لأنها على متطوعين أصحاء وتقيس الحرائك. لذلك خبرتك في تأسيس مركز تكافؤ قريبة جداً من متطلبات وحدات المرحلة الأولى.",en:"Key link: BE studies resemble Phase I (healthy volunteers, PK measurement), so your BE centre experience is very close to Phase I unit requirements."}
+ ],
+ self:[
+  {q:{ar:"ما الفرق بين التعمية المفردة والمزدوجة؟",en:"Single vs double blinding?"},a:{ar:"المفردة: المشارك لا يعرف علاجه. المزدوجة: المشارك والباحث لا يعرفان.",en:"Single: the participant doesn’t know. Double: neither participant nor investigator knows."}},
+  {q:{ar:"لماذا تكون المرحلة الأولى في أدوية الأورام على مرضى؟",en:"Why is oncology Phase I done in patients?"},a:{ar:"لأن الدواء سام بطبيعته، فلا يجوز تعريض أصحاء له.",en:"The drug is inherently toxic, so exposing healthy people is unjustified."}},
+  {q:{ar:"أي مرحلة هي الأساس لتسجيل الدواء؟",en:"Which phase is the basis for registration?"},a:{ar:"المرحلة الثالثة (Pivotal).",en:"Phase III (pivotal)."}}
+ ]},
+{id:"reg",t:{ar:"الدرس 4: الموافقات التنظيمية في المملكة",en:"Lesson 4: Regulatory approvals in Saudi Arabia"},
+ goal:{ar:"تعرفين ما تطلبه SFDA لكل نوع دراسة، والالتزامات أثناء الدراسة وبعدها، حسب الإصدار 4.0 (28 يونيو 2026).",en:"Know SFDA requirements for each study type and obligations during and after, per v4.0 (28 June 2026)."},
+ b:[
+ {k:"h",ar:"المتطلبات المشتركة",en:"Common requirements"},
+ {k:"ul",ar:["التسجيل في السجل السعودي للتجارب السريرية (SCTR) لكل الدراسات، والتسجيل لا يعني الموافقة.","موافقة لجنة أخلاقيات محلية مسجلة لدى NCBE.","تدريب GCP لكل الفريق البحثي، وآخر تدريب لا يتجاوز ثلاث سنوات.","وجود رسمي أو ممثل قانوني في المملكة لمقدم الطلب.","رخصة استيراد للمستحضرات، ولا يُفرج عن المستحضر التجريبي قبل الموافقة الكاملة.","رسوم 15,000 ريال، تُعفى منها الدراسات الحكومية وغير الممولة والمرحلة الرابعة."],
+  en:["SCTR registration for all studies; registration is not approval.","Approval from an NCBE-registered local IRB.","GCP training for the whole team, no older than three years.","Official presence or legal representative in KSA.","Import licence; investigational product not released before full approval.","SAR 15,000 fee, waived for government, unsponsored, and Phase IV studies."]},
+ {k:"h",ar:"من يقدم الطلب؟",en:"Who applies?"},
+ {k:"ul",ar:["تجربة ترعاها جهة حكومية: مركز الأبحاث أو المستشفى أو CRO أو الباحث الرئيس المفوض.","تجربة يرعاها القطاع الخاص: الراعي أو CRO.","تجربة غير ممولة: الباحث الرئيس أو CRO."],
+  en:["Government-sponsored: the research centre, hospital, CRO, or authorised PI.","Private-sector sponsored: the sponsor or CRO.","Unsponsored: the PI or CRO."]},
+ {k:"h",ar:"حسب نوع الدراسة",en:"By study type"},
+ {k:"tbl",h:{ar:["النوع","موقف الهيئة","اشتراط خاص","مدة الرد"],en:["Type","SFDA position","Specific","Response"]},
+  r:{ar:[["المرحلة الأولى","موافقة مسبقة","وحدة معتمدة + دليل مخاطر أول استخدام على الإنسان + تقارير قبل سريرية","60 يوم عمل"],["الثانية","موافقة مسبقة","بروتوكول، كتيب باحث، ملف المستحضر، تأمين، خطة مراقبة","40 يوم عمل"],["الثالثة","موافقة مسبقة","كالثانية + IDMC عند الحاجة","30 يوم عمل"],["الرابعة","إخطار وإقرار","التسجيل في SCTR وإرسال المتطلبات خلال 20 يوم عمل من موافقة IRB","10 أيام عمل"],["التكافؤ الحيوي","موافقة مسبقة","مركز مرخّص من الهيئة أو جهة محلية أو مجلس الصحة الخليجي","15 يوم عمل"],["المنتجات الحيوية","موافقة مسبقة","لقاحات، علاج جيني، خلايا جذعية، بدائل حيوية، في أي مرحلة","60 يوم عمل"]],
+     en:[["Phase I","Prior approval","Accredited unit + first-in-human risk guideline + preclinical reports","60 WD"],["Phase II","Prior approval","Protocol, IB, IP dossier, insurance, monitoring plan","40 WD"],["Phase III","Prior approval","As II + IDMC where needed","30 WD"],["Phase IV","Notification + acknowledgement","SCTR registration and submission within 20 WD of IRB approval","10 WD"],["BE","Prior approval","Centre licensed by SFDA, local authority, or Gulf Health Council","15 WD"],["Biologicals","Prior approval","Vaccines, gene therapy, stem cells, biosimilars, any phase","60 WD"]]}},
+ {k:"note",ar:"المدد تبدأ بعد اكتمال المستندات واجتياز التحقق الإداري، وتتوقف أثناء رد مقدم الطلب على الملاحظات. وتوصي الهيئة بألا تتجاوز جولات المراجعة ثلاث جولات.",en:"Timelines start after complete documents and administrative validation, and stop while the applicant responds. The SFDA recommends fewer than three review rounds."},
+ {k:"h",ar:"حالات المرحلة الرابعة",en:"Phase IV nuances"},
+ {k:"ul",ar:["إذا تضمنت الدراسة على دواء مسجل استطباباً جديداً، أو تغيير الجرعة أو طريقة الإعطاء، أو شكلاً صيدلانياً جديداً، فهي تُعامل كمرحلة مبكرة وتحتاج موافقة كاملة.","الدراسات غير التداخلية لجمع معلومات السلامة أو السجلات القائمة على الملاحظة تتبع دليل ممارسات اليقظة الدوائية الجيدة (GVP).","الاستبانات والاستطلاعات (رضا، وعي) مستثناة من التسجيل في SCTR."],
+  en:["A study on a registered drug with a new indication, dose or route change, or new dosage form is treated as early-phase and needs full approval.","Non-interventional safety studies and observational registries follow Good Pharmacovigilance Practices (GVP).","Surveys (satisfaction, awareness) are exempt from SCTR registration."]},
+ {k:"h",ar:"أثناء الدراسة وبعدها",en:"During and after the study"},
+ {k:"ul",ar:["تقرير تقدم سنوي مع سجل التفويض وإثبات تدريب GCP. وإذا كانت مدة الدراسة أقل من سنة، يُقدم بعد مرور نصف المدة.","التعديلات الجوهرية (بروتوكول، كتيب الباحث، نموذج الموافقة) تحتاج موافقة قبل التطبيق، وغير الجوهرية تُذكر في التقرير السنوي.","إذا تعرض مشارك لخطر، يجوز تطبيق التعديل فوراً مع إبلاغ الهيئة واللجنة.","SUSAR: خلال 15 يوماً كحد أقصى، أو 7 أيام إذا كان مميتاً أو مهدداً للحياة مع تقرير متابعة خلال 8 أيام، وتقرير DSUR سنوي.","إخطار الهيئة خلال 60 يوماً عند الإكمال أو الإنهاء أو التعليق، والتقرير النهائي خلال سنة وفق ICH E3.","تصدير العينات الحيوية يحتاج إذن تصدير من اللجنة المحلية.","المراقب لا يجوز أن يكون من الفريق البحثي، وتُقدم خطة المراقبة مع سيرته وشهادة GCP.","يجب الإفصاح عن استخدام الذكاء الاصطناعي في وثائق التجربة عند التقديم."],
+  en:["Annual progress report with delegation log and GCP proof; if under a year, at half the study duration.","Substantial amendments (protocol, IB, consent form) need approval first; non-substantial go in the annual report.","If a participant is at risk, an amendment may be applied immediately with notification to the SFDA and IRB.","SUSAR: within 15 days at most, or 7 days if fatal or life-threatening with follow-up within 8 days; annual DSUR.","Notify within 60 days of completion, termination, or suspension; final report within one year per ICH E3.","Exporting biological samples requires the local IRB’s export permission.","The monitor must not be on the research team; submit the monitoring plan with their CV and GCP.","Any use of AI in trial documents must be declared on submission."]},
+ {k:"h",ar:"جديد في الإصدار 4.0",en:"New in v4.0"},
+ {k:"ul",ar:["مسار الاعتماد (Reliance): تسريع المراجعة إذا كانت الدراسة معتمدة من جهة صارمة: FDA أو EMA أو MHRA أو Swissmedic.","برنامج الوصول بعد التجربة (PTAP): استمرار العلاج للمشاركين المستفيدين، ويُقدم خلال 60 يوماً قبل الإغلاق.","قسم للدراسات التي يبادر بها الباحثون، والسماح بالتقديم المتوازي."],
+  en:["Reliance pathway: faster review with approval from a stringent authority: FDA, EMA, MHRA, or Swissmedic.","Post-Trial Access Programme (PTAP): continued treatment for benefiting participants; submit 60 days before close-out.","A section for investigator-initiated studies, and parallel submission."]},
+ {k:"note",ar:"نقطة قوية: الإصدار 4.0 صدر قبل أقل من ثلاثة أشهر. معرفتك بتفاصيله تعكس متابعتك للتحديثات.",en:"Strong point: v4.0 was issued less than three months ago. Knowing its details shows you keep up to date."}
+ ],
+ self:[
+  {q:{ar:"كم مدة رد الهيئة لكل من المرحلة الأولى والتكافؤ الحيوي والرابعة؟",en:"SFDA response time for Phase I, BE, and Phase IV?"},a:{ar:"60 و 15 و 10 أيام عمل.",en:"60, 15, and 10 working days."}},
+  {q:{ar:"دراسة مرحلة رابعة على دواء مسجل لكن بجرعة جديدة: ماذا تحتاج؟",en:"Phase IV on a registered drug at a new dose: what is needed?"},a:{ar:"موافقة كاملة، لأنها تُعامل كمرحلة مبكرة.",en:"Full approval; it is treated as early-phase."}},
+  {q:{ar:"ما مهلة إبلاغ SUSAR المميت؟",en:"Deadline for a fatal SUSAR?"},a:{ar:"7 أيام، ثم تقرير متابعة خلال 8 أيام.",en:"7 days, then follow-up within 8 days."}}
+ ]},
+{id:"be",t:{ar:"الدرس 5: التكافؤ الحيوي",en:"Lesson 5: Bioequivalence"},
+ goal:{ar:"تشرحين التكافؤ الحيوي ومؤشراته ومعيار قبوله بمثال رقمي، وتصميم الدراسة ومكوناتها التشغيلية وأخلاقياتها.",en:"Explain BE, its parameters and acceptance with a numeric example, the design, operational pillars, and ethics."},
+ b:[
+ {k:"h",ar:"الفكرة",en:"The idea"},
+ {k:"p",ar:"عندما تنتهي حماية براءة دواء أصلي، تستطيع المصانع إنتاج نسخة جنيسة بنفس المادة الفعالة والجرعة. لكن كيف نتأكد أن النسخة تعمل مثل الأصلي دون تكرار كل التجارب السريرية؟ الجواب: نثبت أن الدواءين يوصلان المادة الفعالة إلى الدم بنفس المعدل ونفس الكمية تقريباً. إذا تطابق مستوى الدواء في الدم، فالمتوقع أن يتطابق الأثر العلاجي.",en:"When an originator’s patent expires, manufacturers can make a generic with the same active ingredient and strength. How do we know it works the same without repeating all trials? We show both deliver the active ingredient to the blood at essentially the same rate and extent. If blood levels match, the therapeutic effect is expected to match."},
+ {k:"p",ar:"وهذا ما يجعل التكافؤ الحيوي أساس التوطين الدوائي: كل مصنع محلي ينتج دواءً جنيساً يحتاج دراسة تكافؤ لتسجيله.",en:"That is why BE underpins pharmaceutical localisation: every local generic manufacturer needs BE studies to register products."},
+ {k:"h",ar:"المؤشرات الحرائكية",en:"PK parameters"},
+ {k:"tbl",h:{ar:["المؤشر","المعنى","ماذا يعكس"],en:["Parameter","Meaning","Reflects"]},
+  r:{ar:[["Cmax","أعلى تركيز يصل له الدواء في الدم","معدل (سرعة) الامتصاص"],["AUC","المساحة تحت منحنى التركيز مع الزمن","كمية الامتصاص الكلية"],["Tmax","الزمن اللازم للوصول لأعلى تركيز","مؤشر داعم"]],
+     en:[["Cmax","Peak blood concentration","Rate of absorption"],["AUC","Area under the concentration-time curve","Total extent of absorption"],["Tmax","Time to peak","Supportive"]]}},
+ {k:"h",ar:"معيار القبول بمثال",en:"Acceptance criterion, with an example"},
+ {k:"p",ar:"نحسب نسبة المتوسط الهندسي (GMR) للجنيس إلى المرجعي، ثم فترة الثقة 90% حولها. يُقبل التكافؤ إذا وقعت الفترة كاملة بين 80.00% و 125.00% لكل من AUC و Cmax. نستخدم المتوسط الهندسي لأن بيانات التركيز تُحلل بعد تحويلها لوغاريتمياً، ولذلك الحدود غير متماثلة (80 و 125 هما مقلوب بعضهما).",en:"We compute the geometric mean ratio (GMR) of generic to reference and its 90% confidence interval. BE is accepted if the whole interval lies between 80.00% and 125.00% for both AUC and Cmax. Geometric means are used because concentrations are log-transformed, which is why the limits are asymmetric (80 and 125 are reciprocals)."},
+ {k:"tbl",h:{ar:["مثال توضيحي","GMR","فترة الثقة 90%","النتيجة"],en:["Illustrative example","GMR","90% CI","Result"]},
+  r:{ar:[["دواء أ","98%","91% – 106%","مقبول: الفترة كاملة داخل الحدود"],["دواء ب","86%","78% – 95%","مرفوض: الحد الأدنى تحت 80%"],["دواء ج","100%","79% – 127%","مرفوض رغم أن المتوسط مثالي: تباين عالٍ أو عينة صغيرة"]],
+     en:[["Drug A","98%","91%–106%","Pass: the whole interval is inside"],["Drug B","86%","78%–95%","Fail: lower bound below 80%"],["Drug C","100%","79%–127%","Fail despite a perfect mean: high variability or small sample"]]}},
+ {k:"warn",ar:"خطأ شائع: القول إن 80–125% تسمح بفرق 20%. المثال (ج) يوضح أن متوسطاً مثالياً قد يفشل. عملياً يجب أن يكون المتوسطان قريبين جداً والتباين منخفضاً حتى تقع الفترة كاملة داخل الحدود.",en:"Common mistake: saying 80–125% allows a 20% difference. Example C shows a perfect mean can still fail. In practice, means must be very close and variability low for the whole interval to fit."},
+ {k:"h",ar:"حالات خاصة",en:"Special cases"},
+ {k:"ul",ar:["الأدوية عالية التباين: إذا كان التباين داخل الشخص 30% أو أكثر. في إرشادات EMA يمكن توسيع حدود Cmax فقط (لا AUC) حتى 69.84–143.19% حسب تباين المرجعي، بتصميم متكرر (Replicate).","الأدوية ضيقة المؤشر العلاجي (مثل بعض أدوية الصرع ومضادات التخثر): حدود أضيق لأن الفرق البسيط قد يكون خطراً.","الإعفاء الحيوي (Biowaiver): إعفاء بعض الأدوية من الدراسة البشرية بناءً على نظام التصنيف الصيدلاني الحيوي (BCS) واختبارات الذوبان.","لـ SFDA دليل خاص بالتكافؤ الحيوي؛ راجعي نسخته الحالية لأن الأرقام أعلاه من FDA و EMA."],
+  en:["Highly variable drugs: within-subject CV of 30% or more. Under EMA guidance, Cmax limits only (not AUC) may widen up to 69.84–143.19% based on reference variability, using a replicate design.","Narrow therapeutic index drugs (some antiepileptics, anticoagulants): tighter limits, as small differences can be dangerous.","Biowaiver: some drugs exempt from human study based on BCS and dissolution testing.","The SFDA has its own BE guideline; review its current version, as the figures above are from FDA and EMA."]},
+ {k:"h",ar:"تصميم الدراسة",en:"Study design"},
+ {k:"p",ar:"التصميم المعتاد: دراسة عشوائية متقاطعة بفترتين وتسلسلين (2x2). نصف المتطوعين يأخذون الجنيس أولاً ثم المرجعي، والنصف الآخر العكس. بين الفترتين فترة غسيل كافية لخروج الدواء، عادة لا تقل عن خمسة أضعاف عمر النصف. ميزة التقاطع أن كل متطوع يُقارن بنفسه، فيقل تأثير الفروق بين الأشخاص. وتُجرى صائمين أو بعد وجبة حسب الدواء.",en:"Standard design: randomised two-period, two-sequence (2x2) crossover. Half the volunteers take the generic first then the reference, the other half the reverse, with a washout of usually at least five half-lives between. Crossover lets each volunteer serve as their own control, reducing between-person variability. Fasting or fed depending on the drug."},
+ {k:"h",ar:"المكونات التشغيلية الثلاثة",en:"Three operational pillars"},
+ {k:"tbl",h:{ar:["المكون","ما يحدث","متطلبات أساسية"],en:["Pillar","What happens","Key requirements"]},
+  r:{ar:[["الشق السريري","فحص واستقطاب، إيواء، جرعات، سحب عينات بدقة زمنية، مراقبة السلامة","GCP، وحدة مبيت، طوارئ، سجل متطوعين"],["الشق التحليلي","تحليل تراكيز الدواء في البلازما، غالباً بجهاز LC-MS/MS","GLP، طرق تحليل مصادق عليها، تجميد العينات، سلسلة الحفظ، إعادة تحليل عينات مختارة"],["الشق الإحصائي والحرائكي","حساب Cmax و AUC و Tmax وفترات الثقة وإعداد التقرير","برامج مصادق عليها مثل Phoenix WinNonlin و SAS أو R"]],
+     en:[["Clinical","Screening, housing, dosing, time-critical sampling, safety monitoring","GCP, overnight unit, emergency readiness, volunteer registry"],["Bioanalytical","Measuring plasma concentrations, usually by LC-MS/MS","GLP, validated methods, frozen storage, chain of custody, incurred sample reanalysis"],["PK and statistics","Calculating Cmax, AUC, Tmax and confidence intervals; reporting","Validated software such as Phoenix WinNonlin and SAS or R"]]}},
+ {k:"h",ar:"أخلاقيات التكافؤ الحيوي",en:"BE ethics"},
+ {k:"ul",ar:["المتطوع السليم لا ينتفع علاجياً، فيجب أن يكون الخطر في أدنى مستوى.","التعويض المالي عادل لكن لا يصبح إغراءً يدفع للمشاركة رغم المخاطر.","سجل مركزي للمتطوعين يمنع المشاركة في أكثر من دراسة خلال فترة قصيرة.","موافقة بلغة مفهومة وحق الانسحاب في أي وقت.","الشفافية مع اللجنة في أي حدث ضائر."],
+  en:["Healthy volunteers gain no therapeutic benefit, so risk must be minimal.","Fair compensation that does not become an inducement to accept risk.","A central registry to prevent enrolment in multiple studies in a short period.","Plain-language consent and the right to withdraw at any time.","Transparency with the IRB about any adverse event."]}
+ ],
+ self:[
+  {q:{ar:"دواء GMR فيه 100% وفترة الثقة 79–127%. هل هو مكافئ؟ ولماذا؟",en:"GMR 100%, CI 79–127%. Bioequivalent? Why?"},a:{ar:"لا. الفترة تخرج عن 80–125% رغم المتوسط المثالي، بسبب تباين عالٍ أو عينة صغيرة.",en:"No. The interval falls outside 80–125% despite a perfect mean, due to high variability or small sample."}},
+  {q:{ar:"لماذا يُستخدم التصميم المتقاطع؟",en:"Why use a crossover design?"},a:{ar:"لأن كل متطوع يُقارن بنفسه، فيقل أثر الفروق بين الأشخاص ويكفي عدد أقل.",en:"Each volunteer is their own control, reducing between-person variability and sample size."}},
+  {q:{ar:"ما المؤشر الذي يعكس معدل الامتصاص؟",en:"Which parameter reflects absorption rate?"},a:{ar:"Cmax.",en:"Cmax."}}
+ ]},
+{id:"par",t:{ar:"الدرس 6: أطراف منظومة التجارب السريرية",en:"Lesson 6: The clinical trial ecosystem"},
+ goal:{ar:"تشرحين دور الشركة والراعي و CRO والباحث، والتسلسل من الفكرة للتسجيل، ومسار السلامة، والوثائق الأساسية.",en:"Explain the roles of company, sponsor, CRO, and PI, the sequence to registration, the safety flow, and essential documents."},
+ b:[
+ {k:"p",ar:"أسهل طريقة للفهم هي تشبيه التجربة بمشروع إنشائي: الشركة الدوائية صاحبة المنتج، والراعي المالك القانوني للمشروع، و CRO مدير المشروع المتعاقد، والباحث الرئيس المسؤول في الموقع. وحولهم جهتان رقابيتان: لجنة الأخلاقيات التي تحمي المشاركين، و SFDA التي تجيز وتراقب.",en:"Think of a trial as a construction project: the pharmaceutical company owns the product, the sponsor is the project’s legal owner, the CRO is the contracted project manager, and the PI is accountable on site. Two oversight bodies surround them: the IRB protecting participants, and the SFDA authorising and supervising."},
+ {k:"tbl",h:{ar:["الطرف","التعريف","أبرز المسؤوليات","يُحاسب على"],en:["Party","Definition","Key duties","Accountable for"]},
+  r:{ar:[["الشركة الدوائية","طوّرت المستحضر أو تصنّعه، وغالباً صاحبة حق التسويق","دراسات قبل سريرية وفق GLP، تصنيع وفق GMP، ملف التسجيل، اليقظة الدوائية","جودة المنتج وسلامته بعد التسويق"],["الراعي","فرد أو جهة تتولى بدء التجربة وإدارتها وتمويلها","البروتوكول وكتيب الباحث، اختيار المواقع، الموافقات، المستحضر، المراقبة، السلامة، التأمين، التقرير النهائي","المسؤولية النهائية عن الجودة ونزاهة البيانات"],["CRO","جهة يتعاقد معها الراعي لأداء بعض مهامه أو كلها","الجدوى، الملف التنظيمي، المراقبة، إدارة البيانات، اليقظة الدوائية","جودة المهام المفوضة بموجب العقد"],["الباحث الرئيس","المؤهل المسؤول عن التجربة في موقع محدد","موافقة اللجنة، الاستقطاب والموافقة المستنيرة، تطبيق البروتوكول، الرعاية الطبية، إدارة المستحضر، سجل التفويض","سلامة المشاركين ودقة بيانات موقعه"]],
+     en:[["Pharma company","Developed or manufactures the product; usually the MAH","GLP preclinical studies, GMP manufacture, registration dossier, pharmacovigilance","Product quality and post-marketing safety"],["Sponsor","Individual or entity that initiates, manages, and funds the trial","Protocol and IB, site selection, approvals, IP, monitoring, safety, insurance, final report","Ultimate responsibility for quality and data integrity"],["CRO","Contracted by the sponsor for some or all duties","Feasibility, regulatory dossier, monitoring, data management, pharmacovigilance","Quality of delegated tasks under contract"],["PI","Qualified person accountable for the trial at a site","IRB approval, recruitment and consent, protocol adherence, medical care, IP management, delegation log","Participant safety and site data accuracy"]]}},
+ {k:"note",ar:"القاعدة الذهبية: الراعي يستطيع نقل المهام إلى CRO، لكنه لا يستطيع نقل المسؤولية النهائية. وإذا بادر الباحث بالتجربة دون ممول، يصبح «الباحث الراعي» ويتحمل الدورين.",en:"Golden rule: the sponsor can transfer tasks to a CRO but never ultimate responsibility. An investigator who initiates an unfunded trial becomes a sponsor-investigator and carries both roles."},
+ {k:"h",ar:"في السعودية تحديداً",en:"Saudi specifics"},
+ {k:"ul",ar:["الراعي بلا وجود رسمي في المملكة يستطيع تفويض CRO أو الباحث الرئيس، بشرط أن يشمل التفويض كل المسؤوليات والإجراءات النظامية.","الباحث يوقع «إقرار الباحث» (Form 4) الذي يتضمن رقم تسجيله في الهيئة السعودية للتخصصات الصحية ورقم تسجيل اللجنة لدى NCBE.","الباحث يفصح عن مصالحه المالية مع الراعي (Form 3)."],
+  en:["A sponsor without KSA presence can authorise a CRO or the PI, covering all responsibilities and legal procedures.","The PI signs the Statement of Investigator (Form 4) with their SCFHS number and the IRB’s NCBE number.","The PI discloses financial interests with the sponsor (Form 3)."]},
+ {k:"h",ar:"التسلسل من الفكرة إلى الدواء المسجل",en:"From idea to registered drug"},
+ {k:"ol",ar:["التطوير قبل السريري (الشركة): دراسات سمية وحرائك، وتصنيع دفعات تجريبية.","التخطيط (الراعي): البروتوكول وكتيب الباحث واختيار CRO.","الجدوى واختيار المواقع (CRO).","التعاقد: اتفاقية التجربة (CTA) والميزانية مع الموقع.","الموافقات: اللجنة (الباحث) و SCTR و SFDA ورخصة الاستيراد (الراعي أو CRO).","تفعيل الموقع: تدريب الفريق وتوريد المستحضر وزيارة البدء.","التنفيذ (الباحث وفريقه): الاستقطاب والموافقة والجرعات والبيانات.","المراقبة والسلامة: زيارات المراقبة ومعالجة الاستفسارات والإبلاغ.","الإغلاق: قفل قاعدة البيانات وإتلاف أو إعادة المستحضر.","التحليل والتقرير النهائي وفق ICH E3.","التسجيل (الشركة)، ثم اليقظة الدوائية والمرحلة الرابعة."],
+  en:["Preclinical (company): toxicology and PK, trial batches.","Planning (sponsor): protocol, IB, CRO selection.","Feasibility and site selection (CRO).","Contracting: CTA and budget with the site.","Approvals: IRB (PI), SCTR, SFDA, import licence (sponsor/CRO).","Site activation: training, IP supply, initiation visit.","Conduct (PI and team): recruitment, consent, dosing, data.","Monitoring and safety: visits, queries, reporting.","Close-out: database lock, IP destruction or return.","Analysis and final report per ICH E3.","Registration (company), then pharmacovigilance and Phase IV."]},
+ {k:"h",ar:"مسار معلومات السلامة",en:"Safety information flow"},
+ {k:"ol",ar:["الباحث يرصد الحدث الضائر الخطير ويعالجه، ويبلغ الراعي فوراً ويُخطر اللجنة.","الراعي أو CRO يقيّم: هل هو مرتبط بالدواء؟ وهل هو متوقع حسب كتيب الباحث؟","إذا كان SUSAR: يُبلغ الهيئة خلال 15 يوماً، أو 7 إذا كان مميتاً أو مهدداً للحياة.","الراعي يحدّث كتيب الباحث و DSUR ويبلغ كل الباحثين."],
+  en:["The PI detects and treats the serious adverse event, reports to the sponsor immediately, and notifies the IRB.","The sponsor or CRO assesses: related to the drug? expected per the IB?","If a SUSAR: report to the SFDA within 15 days, or 7 if fatal or life-threatening.","The sponsor updates the IB and DSUR and informs all investigators."]},
+ {k:"h",ar:"الوثائق الأساسية التي يجب معرفتها",en:"Essential documents to know"},
+ {k:"tbl",h:{ar:["الوثيقة","الغرض"],en:["Document","Purpose"]},
+  r:{ar:[["نموذج الموافقة المستنيرة (ICF)","توثيق موافقة المشارك بعد الشرح"],["نموذج الحالة (CRF)","تسجيل بيانات كل مشارك حسب البروتوكول"],["سجل التفويض (Delegation Log)","من في الفريق مفوض بأي مهمة"],["سجل محاسبة المستحضر","كل وحدة مستلمة ومصروفة ومعادة أو متلفة"],["ملف التجربة الرئيسي (TMF)","كل الوثائق الأساسية للتجربة لدى الراعي، وجاهزيته للتفتيش"],["ملف الموقع (ISF)","الوثائق الأساسية لدى الموقع"]],
+     en:[["Informed consent form (ICF)","Documents consent after explanation"],["Case report form (CRF)","Records each participant’s data per protocol"],["Delegation log","Who on the team is authorised for which task"],["IP accountability log","Every unit received, dispensed, returned, or destroyed"],["Trial Master File (TMF)","All essential trial documents at the sponsor; inspection-ready"],["Investigator Site File (ISF)","Essential documents at the site"]]}}
+ ],
+ self:[
+  {q:{ar:"من يتحمل المسؤولية النهائية إذا أخطأت CRO في المراقبة؟",en:"Who is ultimately responsible if the CRO fails at monitoring?"},a:{ar:"الراعي، لأنه ينقل المهام لا المسؤولية.",en:"The sponsor; it delegates tasks, not responsibility."}},
+  {q:{ar:"ما وظيفة سجل التفويض؟",en:"What is the delegation log for?"},a:{ar:"توثيق من في فريق الموقع مفوض بأي مهمة، وتحت إشراف الباحث الرئيس.",en:"Recording which site team members are authorised for which tasks under the PI."}},
+  {q:{ar:"راعٍ أجنبي بلا مكتب في المملكة: كيف يقدم طلبه؟",en:"A foreign sponsor with no KSA office: how does it apply?"},a:{ar:"يفوض CRO أو الباحث الرئيس تفويضاً يشمل كل المسؤوليات.",en:"It authorises a CRO or the PI with full responsibilities."}}
+ ]},
+{id:"kai",t:{ar:"الدرس 7: نموذج KAIMRC والفرق بين CRO و SMO",en:"Lesson 7: The KAIMRC model, CRO vs SMO"},
+ goal:{ar:"تشرحين كيف تنظم مؤسسة كبرى التجارب السريرية، ولماذا يُفصل الباحث عن المراقبة.",en:"Explain how a major institution organises trials, and why the investigator is separated from monitoring."},
+ b:[
+ {k:"warn",ar:"تحدثي عن KAIMRC كمعلومات عامة منشورة فقط، دون أي تفاصيل تعاقدية أو تشغيلية داخلية من عملك.",en:"Discuss KAIMRC only as published public information, without contractual or internal operational details from your work."},
+ {k:"h",ar:"الهيكل",en:"Structure"},
+ {k:"p",ar:"لدى KAIMRC إدارة للتجارب السريرية بفريق متعدد التخصصات من منسقين وباحثين حاصلين على GCP، تدير التجربة من الجدوى إلى الإغلاق. ومن وحداتها: وحدة الأدوية التجريبية، ووحدة المراقبة وضمان الجودة، ووحدة المرحلة الأولى التي تقدمها KAIMRC على أنها الوحيدة المعتمدة من SFDA في المملكة، ومكتب لتعزيز التجارب والتواصل مع الرعاة.",en:"KAIMRC has a Clinical Trial Management department with GCP-certified coordinators and investigators, running trials from feasibility to close-out. Units include an Investigational Drug Unit, Monitoring and QA, a Phase 1 unit that KAIMRC presents as the only SFDA-accredited one in the Kingdom, and an engagement office for sponsors."},
+ {k:"h",ar:"CRO أم SMO؟",en:"CRO or SMO?"},
+ {k:"tbl",h:{ar:["","CRO","SMO / مكتب أبحاث الموقع"],en:["","CRO","SMO / site research office"]},
+  r:{ar:[["يعمل لصالح","الراعي","الموقع والباحث"],["أمثلة المهام","المراقبة، إدارة البيانات، الملف التنظيمي","المنسقون، الاستقطاب، صيدلية الدواء التجريبي، تفعيل الموقع"]],
+     en:[["Works for","The sponsor","The site and investigator"],["Typical tasks","Monitoring, data management, regulatory dossier","Coordinators, recruitment, investigational pharmacy, site activation"]]}},
+ {k:"h",ar:"ثلاث حالات",en:"Three scenarios"},
+ {k:"tbl",h:{ar:["الحالة","الراعي","دور إدارة KAIMRC","من يراقب"],en:["Scenario","Sponsor","KAIMRC department role","Who monitors"]},
+  r:{ar:[["تجربة ترعاها شركة","الشركة، ومعها CRO خارجية غالباً","دعم الموقع (دور SMO)","CRO الخارجية"],["تجربة يبادر بها باحث","KAIMRC نفسها","دور شبيه بـ CRO: تصميم ومراقبة وبيانات وإبلاغ","وحدة المراقبة، مستقلة عن الفريق"],["دراسة تكافؤ حيوي","مصنع الجنيس عادة","مركز التكافؤ ينفذ الشقين السريري والتحليلي","الراعي أو CRO يعينها"]],
+     en:[["Industry-sponsored","The company, usually with an external CRO","Site support (SMO role)","External CRO"],["Investigator-initiated","KAIMRC itself","CRO-like: design, monitoring, data, reporting","Monitoring unit, independent of the team"],["Bioequivalence","Usually the generic manufacturer","The BE centre runs clinical and bioanalytical phases","Sponsor or its CRO"]]}},
+ {k:"h",ar:"لماذا الفصل؟",en:"Why separate?"},
+ {k:"p",ar:"الباحث مسؤول عن التنفيذ، والمراقب مسؤول عن التحقق منه. لو اجتمع الدوران فلا أحد يتحقق من الباحث. ولهذا ينص دليل SFDA الإصدار 4.0 على أن المراقب لا يجوز أن يكون من الفريق البحثي.",en:"The PI executes; the monitor verifies. If combined, no one checks the investigator. That is why SFDA v4.0 states the monitor must not be on the research team."},
+ {k:"h",ar:"إنجازات منشورة",en:"Published achievements"},
+ {k:"ul",ar:["اعتماد AAHRPP لبرنامج حماية المشاركين (2023).","شهادة GCSA من IAOCR في يونيو 2025، كأول شبكة مواقع تجارب في المملكة.","مذكرة تفاهم مع Flagship Pioneering (نوفمبر 2025) لتجارب المراحل المبكرة لأدوية مبتكرة."],
+  en:["AAHRPP accreditation of its human research protection programme (2023).","IAOCR GCSA certification in June 2025, the first trial site network in KSA.","MOU with Flagship Pioneering (November 2025) for early-phase trials of novel medicines."]},
+ {k:"note",ar:"الرسالة للحبيب: «الباحثون في الأقسام من جهة، ومكتب مركزي يدعم الموقع ويشغّل المراقبة المستقلة من جهة أخرى. هذا ما يجذب الرعاة الدوليين.»",en:"Message for Al Habib: “Investigators in departments, and a central office supporting the site and running independent monitoring. That is what attracts international sponsors.”"}
+ ],
+ self:[
+  {q:{ar:"ما الفرق الجوهري بين CRO و SMO؟",en:"Key difference between CRO and SMO?"},a:{ar:"لمن يعمل: CRO للراعي، و SMO للموقع والباحث.",en:"Whom it serves: CRO the sponsor, SMO the site and investigator."}},
+  {q:{ar:"في تجربة يبادر بها باحث في KAIMRC، من الراعي؟",en:"In an investigator-initiated KAIMRC trial, who is the sponsor?"},a:{ar:"KAIMRC نفسها.",en:"KAIMRC itself."}},
+  {q:{ar:"ما النص التنظيمي الذي يدعم فصل المراقب؟",en:"What rule supports separating the monitor?"},a:{ar:"دليل SFDA الإصدار 4.0: المراقب لا يكون من الفريق البحثي.",en:"SFDA v4.0: the monitor must not be on the research team."}}
+ ]},
+{id:"hmg",t:{ar:"الدرس 8: المحاور ومجموعة الحبيب",en:"Lesson 8: The interviewer and Al Habib"},
+ goal:{ar:"تعرفين من يحاورك، وكيف تعمل المنظومة البحثية في الحبيب، وما الفرص التي تربطين بها خبرتك.",en:"Know your interviewer, how Al Habib’s research system works, and which opportunities to link your experience to."},
+ b:[
+ {k:"h",ar:"د. زياد ميمش",en:"Dr. Ziad Memish"},
+ {k:"ul",ar:["أخصائي أمراض معدية، ورئيس تحرير مجلة الدكتور سليمان الحبيب الطبية، وأستاذ في كلية الطب بجامعة الفيصل.","مصنف ضمن الأكثر استشهاداً عالمياً من 2018 إلى 2024، وله أكثر من 900 ورقة محكّمة، ورئيس تحرير لعدة مجلات.","جائزة الإنجاز مدى الحياة من هيئة تنمية البحث والتطوير والابتكار (أكتوبر 2024)، ووسام الملك عبدالعزيز من الدرجة الأولى (2007)."],
+  en:["Infectious disease specialist; Editor-in-Chief of the Dr. Sulaiman Al Habib Medical Journal; professor at Alfaisal University.","Highly Cited Researcher 2018–2024, 900+ peer-reviewed papers, editor of several journals.","RDIA Lifetime Achievement Award (October 2024); King Abdulaziz Medal, First Class (2007)."]},
+ {k:"note",ar:"ماذا يعني هذا لك: سيقيّمك بعين باحث ورئيس تحرير. توقعي أسئلة عن النشر ودورك في منشوراتك والنزاهة البحثية. لا تحاولي منافسته علمياً؛ قدمي نفسك كالقادرة على بناء البنية التشغيلية التي تجعل البحث ممكناً.",en:"What this means: expect a researcher’s and editor’s lens, with questions on publishing, your role in your papers, and integrity. Don’t compete scientifically; present yourself as the one who builds the operational infrastructure that makes research possible."},
+ {k:"h",ar:"المنظومة البحثية في الحبيب",en:"Al Habib’s research system"},
+ {k:"ul",ar:["مركز الأبحاث يتبع الشؤون الأكاديمية، ولجنة الأخلاقيات جزء أساسي منه، وهي لجنة محلية تحت مظلة KACST.","المراجعة على مرحلتين: علمية في مركز الأبحاث ثم أخلاقية في اللجنة.","اللجنة نشطة وتطبق مسارات مختلفة (مثال: RC 25.08.75 مع إعفاء من الموافقة). في 2019 راجعت 63 مشروعاً بنسبة قبول 68%.","جوائز البحث عبر المجلة 1.5 مليون ريال: 500 ألف، 300 ألف، 200 ألف، 200 ألف لأربع مراجعات، 150 ألف للطلاب، وجائزة لممارسين في برامج SCFHS، برعاية وزير الصحة.","الأكاديمية: تعليم مستمر، ودبلومات وزمالات، والبورد السعودي، وزمالة جورج واشنطن في التعليم الطبي؛ ودرّبت 2,500 ممارس في سنة مع 18 جامعة.","كلية الدكتور سليمان الحبيب للمعرفة: بدأت بكالوريوس التمريض، والعام الدراسي بدأ 23 أغسطس 2026.","مستشفى جديد في الرياض بسعة 160 سريراً، متوقع تشغيله في الربع الثاني 2029."],
+  en:["The Research Center sits under Academic Affairs; the IRB is a core part, as a local committee under KACST.","Two-step review: scientific at the Research Center, then ethical at the IRB.","The IRB is active and uses different pathways (e.g., RC 25.08.75 with consent waived). In 2019 it reviewed 63 projects with 68% acceptance.","Journal research awards SAR 1.5M: 500k, 300k, 200k, 200k for four reviews, 150k for students, plus SCFHS trainees, under the Minister of Health’s patronage.","Academy: CME, diplomas and fellowships, Saudi Board, a George Washington University fellowship; 2,500 practitioners trained in a year with 18 universities.","Dr. Sulaiman Al Habib College of Knowledge: nursing BSc launched; classes began 23 August 2026.","A new 160-bed Riyadh hospital expected to operate in Q2 2029."]},
+ {k:"h",ar:"كيف تربطين خبرتك",en:"Linking your experience"},
+ {k:"tbl",h:{ar:["ما لديهم","ما تقدمينه"],en:["What they have","What you offer"]},
+  r:{ar:[["جوائز كبيرة تحفز الإنتاج البحثي","تدريب يضمن جودة هذا الإنتاج وامتثاله"],["كلية جديدة وطلبات بحثية ستزيد","ضبط دورة مراجعة اللجنة وتدريب الأخلاقيات"],["توسع في المستشفيات","مكتب مركزي للتجارب يخدم كل المواقع"],["أكاديمية بخبرة في التعليم المستمر","برنامج GCP و GLP معترف به"]],
+     en:[["Large awards driving research output","Training that ensures its quality and compliance"],["A new college; rising research demand","A tighter IRB cycle and ethics training"],["Hospital expansion","A central trials office serving all sites"],["An experienced CME academy","A recognised GCP and GLP programme"]]}},
+ {k:"warn",ar:"غير منشور: رقم تسجيل اللجنة لدى NCBE، وأي اعتماد دولي لها، ووجود وحدة تجارب مستقلة. لا تذكريها كحقائق. وأي ملاحظة على الإجراءات تُطرح كفرصة تطوير.",en:"Not published: the IRB’s NCBE number, any international accreditation, or a dedicated trials unit. Don’t state these as facts, and frame any process point as an opportunity."}
+ ],
+ self:[
+  {q:{ar:"ما علاقة د. زياد بجوائز البحث في الحبيب؟",en:"How is Dr. Ziad linked to Al Habib’s research awards?"},a:{ar:"الجوائز تتبع مجلة الحبيب التي يرأس تحريرها.",en:"The awards belong to the journal he edits."}},
+  {q:{ar:"كيف تتم المراجعة في الحبيب؟",en:"How does review work at Al Habib?"},a:{ar:"علمية في مركز الأبحاث أولاً، ثم أخلاقية في اللجنة.",en:"Scientific at the Research Center first, then ethical at the IRB."}},
+  {q:{ar:"كيف تطرحين ملاحظة على بطء المراجعة؟",en:"How do you raise a point about slow review?"},a:{ar:"كفرصة تطوير: تشغيل المرحلتين بالتوازي للدراسات منخفضة الخطورة، وقياس زمن المراجعة كمؤشر.",en:"As an opportunity: parallel review for low-risk studies and turnaround as a KPI."}}
+ ]},
+{id:"trn",t:{ar:"الدرس 9: مقترح برنامج تدريب GCP و GLP",en:"Lesson 9: The GCP and GLP training proposal"},
+ goal:{ar:"تشرحين لماذا الآن، وما التميز، وما الاعتمادات المطلوبة، وخارطة التنفيذ.",en:"Explain why now, the differentiation, required accreditations, and the roadmap."},
+ b:[
+ {k:"h",ar:"لماذا الآن؟",en:"Why now?"},
+ {k:"ul",ar:["SFDA تشترط أن يكون تدريب GCP لكل الفريق البحثي حديثاً خلال ثلاث سنوات، أي طلب متجدد بحكم النظام.","TransCelerate حدّثت معاييرها في أبريل 2025 لتتوافق مع ICH E6(R3)، ومعظم الرعاة صاروا يطلبون تدريباً يغطي R3.","مراكز التكافؤ ومختبرات التحليل الحيوي تحتاج GLP وممارسات المختبر السريري الجيدة (GCLP).","الأكاديمية لديها بنية تعليم مستمر قائمة."],
+  en:["The SFDA requires GCP training no older than three years for the whole team: regulation-driven recurring demand.","TransCelerate updated its criteria in April 2025 for ICH E6(R3); most sponsors now require R3 coverage.","BE centres and bioanalytical labs need GLP and good clinical laboratory practice (GCLP).","The Academy already has a CME infrastructure."]},
+ {k:"h",ar:"التميز الحقيقي",en:"Real differentiation"},
+ {k:"p",ar:"دورات GCP المجانية المعترف بها موجودة على الإنترنت، فبرنامج «دورة GCP أخرى» لن ينجح. التميز في ثلاثة: محتوى سعودي تنظيمي باللغتين (SFDA والنظام و NCBE)، وتطبيق عملي في موقع تجارب حقيقي، وساعات تعليم مستمر معتمدة من SCFHS، مع اعتراف دولي في نفس الشهادة.",en:"Free recognised GCP courses exist online, so “another GCP course” won’t succeed. Differentiation comes from three things: Saudi regulatory content in both languages, hands-on practice at a real trial site, and SCFHS-accredited CPD hours, plus international recognition on the same certificate."},
+ {k:"h",ar:"طبقات الاعتماد",en:"Layers of accreditation"},
+ {k:"tbl",h:{ar:["الطبقة","الجهة","ماذا تعطي"],en:["Layer","Body","What it gives"]},
+  r:{ar:[["التعليم المستمر الوطني","SCFHS: اعتماد مقدم التعليم المستمر ثم كل نشاط عبر منصة «مستمر»","ساعات يحتاجها الممارس لتجديد تصنيفه"],["قبول الرعاة","TransCelerate: إقرار ذاتي من المزود بمطابقة المعايير الدنيا","قبول الشهادة لدى الرعاة الأعضاء دون إعادة تدريب"],["جودة البرنامج","IAOCR: تقييم المنهجية والمدربين","اعتماد مستقل (ومعروف محلياً لأن KAIMRC حصلت على GCSA منه)"],["GLP","مبادئ OECD وشراكة مع جهة متخصصة","مصداقية المحتوى"],["التواصل التنظيمي","SFDA و NCBE","تعزيز القبول؛ يجب التحقق من وجود مسار رسمي"]],
+     en:[["National CPD","SCFHS: CPD provider accreditation, then per activity via Mustamir","Hours needed for re-registration"],["Sponsor acceptance","TransCelerate: provider self-attestation against minimum criteria","Acceptance by member sponsors without retraining"],["Programme quality","IAOCR: methodology and trainer assessment","Independent accreditation (known locally via KAIMRC’s GCSA)"],["GLP","OECD principles and a specialist partner","Content credibility"],["Regulatory engagement","SFDA and NCBE","Stronger acceptance; verify any formal pathway"]]}},
+ {k:"note",ar:"معلومة مفيدة: اعتماد النشاط الداخلي لدى SCFHS رسومه الإدارية 1,000 ريال ورسوم الاعتماد 500 ريال، ومدة الخدمة 8 أيام عمل.",en:"Useful fact: SCFHS internal activity accreditation costs a SAR 1,000 admin fee plus SAR 500, with an 8-business-day service time."},
+ {k:"h",ar:"المسارات المقترحة",en:"Proposed tracks"},
+ {k:"ul",ar:["GCP الأساسي: E6(R3) و SFDA 4.0 والنظام والموافقة والسلامة.","GCP التجديدي: التحديثات والفروق بين R2 و R3 وأخطاء التفتيش.","مسارات حسب الدور: الباحث، المنسق، المراقب، أعضاء اللجنة.","GLP لمختبرات ما قبل السريري والجودة، و GCLP لمختبرات التحليل الحيوي.","أخلاقيات البحث، وهي شرط نظامي لكل باحث."],
+  en:["GCP Foundation: E6(R3), SFDA 4.0, the law, consent, safety.","GCP Refresher: updates, R2 vs R3, inspection findings.","Role-based: PI, coordinator, monitor, IRB members.","GLP for preclinical and quality labs; GCLP for bioanalytical labs.","Research ethics, a legal requirement for every researcher."]},
+ {k:"h",ar:"خارطة التنفيذ",en:"Roadmap"},
+ {k:"tbl",h:{ar:["المرحلة","المدة","المخرج"],en:["Phase","Duration","Output"]},
+  r:{ar:[["الأساس الداخلي","0–6 أشهر","كل فرق المجموعة بشهادات حديثة وساعات SCFHS"],["الاعتراف والتوسع","6–12 شهراً","إقرار TransCelerate وفتح البرنامج للخارج كمصدر إيراد"],["المختبرات والجودة","12–24 شهراً","GLP و GCLP واعتماد IAOCR"]],
+     en:[["Internal foundation","0–6 months","All internal teams certified with SCFHS hours"],["Recognition and expansion","6–12 months","TransCelerate attestation; opened externally as revenue"],["Labs and quality","12–24 months","GLP, GCLP, IAOCR accreditation"]]}},
+ {k:"warn",ar:"قبل الطرح: لا تقولي «لا يوجد مركز معتمد في المملكة» بشكل مطلق قبل مراجعة قائمة TransCelerate. ولا تعدي بأي اعتماد قبل صدوره.",en:"Before pitching: don’t say “no accredited centre in KSA” before checking TransCelerate’s list, and don’t promise any accreditation before it’s granted."}
+ ],
+ self:[
+  {q:{ar:"ما الطبقة التي تعطي أقوى حافز للتسجيل في البرنامج محلياً؟",en:"Which layer gives the strongest local enrolment incentive?"},a:{ar:"ساعات التعليم المستمر من SCFHS، لأن الممارس يحتاجها لتجديد تصنيفه.",en:"SCFHS CPD hours, needed for re-registration."}},
+  {q:{ar:"كيف تعترف TransCelerate بالدورة؟",en:"How does TransCelerate recognise a course?"},a:{ar:"بإقرار ذاتي من المزود بمطابقة المعايير الدنيا؛ هي لا تكتب التدريب ولا تقدمه.",en:"Provider self-attestation against minimum criteria; it neither writes nor delivers training."}},
+  {q:{ar:"لماذا لن ينجح البرنامج لو كان دورة GCP عادية؟",en:"Why would a plain GCP course fail?"},a:{ar:"لوجود دورات مجانية معترف بها؛ التميز يجب أن يأتي من المحتوى السعودي والتطبيق العملي وساعات CPD.",en:"Free recognised courses exist; value must come from Saudi content, hands-on practice, and CPD hours."}}
+ ]},
+{id:"sys",t:{ar:"الدرس 10: الأنظمة الرقمية (CTMS و LIMS)",en:"Lesson 10: Digital systems (CTMS and LIMS)"},
+ goal:{ar:"تفرقين بين الأنظمة ووظائفها، وتعرفين منظومة مركز التكافؤ، ومعايير الاختيار والامتثال.",en:"Distinguish the systems and their functions, the BE centre stack, and selection and compliance criteria."},
+ b:[
+ {k:"p",ar:"لا يوجد نظام واحد يدير البحث السريري. كل نظام يجيب عن سؤال مختلف، والقيمة الحقيقية في تكاملها.",en:"No single system runs clinical research. Each answers a different question; the real value is integration."},
+ {k:"tbl",h:{ar:["النظام","السؤال الذي يجيب عنه"],en:["System","Question it answers"]},
+  r:{ar:[["إدارة المشاريع","هل المشروع في وقته وميزانيته؟"],["CTMS","أين وصلت كل تجربة وكل موقع؟"],["eTMF / eISF","هل الوثائق مكتملة وجاهزة للتفتيش؟"],["EDC","ما بيانات كل مشارك في كل زيارة؟"],["IRT / RTSM","أي علاج يأخذ المشارك، وكم المخزون؟"],["قاعدة السلامة","ما الأحداث الضائرة ومتى نبلغ؟"],["LIMS","أين العينة، وما نتيجتها، ومن تعامل معها؟"],["ELN","ماذا فعل الباحث بالتفصيل؟"],["CDS","ما البيانات الخام من الجهاز؟"],["QMS / LMS","هل الإجراءات محدّثة والفريق مدرّب؟"]],
+     en:[["Project management","On time and on budget?"],["CTMS","Where is each trial and site?"],["eTMF / eISF","Are documents complete and inspection-ready?"],["EDC","What are each participant’s data at each visit?"],["IRT / RTSM","Which treatment, and what stock?"],["Safety database","Which adverse events, and when to report?"],["LIMS","Where is the sample, its result, who handled it?"],["ELN","What exactly did the scientist do?"],["CDS","What are the raw instrument data?"],["QMS / LMS","Are procedures current and staff trained?"]]}},
+ {k:"h",ar:"إدارة المشاريع مقابل CTMS",en:"Project management vs CTMS"},
+ {k:"p",ar:"برامج المشاريع تدير المهام والموارد والجداول. CTMS تدير كيانات التجارب: المواقع والمشاركين والزيارات والمدفوعات. تأسيس مركز تكافؤ مشروع، أما تشغيل الدراسات فيه بعد الافتتاح فيُدار بـ CTMS. ومعلومة حديثة: Microsoft Project Online يتوقف نهائياً في 30 سبتمبر 2026، بينما يستمر Project Desktop و Planner.",en:"Project tools manage tasks, resources, and schedules. A CTMS manages trial entities: sites, participants, visits, payments. Building a BE centre is a project; running studies in it is CTMS work. Timely fact: Microsoft Project Online retires on 30 September 2026, while Project Desktop and Planner continue."},
+ {k:"h",ar:"CTMS للراعي أم للموقع؟",en:"Sponsor or site CTMS?"},
+ {k:"ul",ar:["CTMS للراعي و CRO: دراسات متعددة المواقع والدول (مثل Veeva Vault CTMS و Medidata و Oracle Siebel).","CTMS للموقع والمؤسسة: كل الدراسات في المستشفى، والتقويم، والفوترة للرعاة (مثل Advarra OnCore و Clinical Conductor).","الحبيب كموقع تحتاج الثاني، مرتبطاً بنظام المستشفى لتحديد المرضى المؤهلين وفصل تكاليف الدراسة عن فاتورة المريض. الخلط بينهما مشكلة مالية وأخلاقية شائعة."],
+  en:["Sponsor/CRO CTMS: multi-site, multi-country studies (e.g., Veeva Vault CTMS, Medidata, Oracle Siebel).","Site/institution CTMS: all hospital studies, calendars, sponsor billing (e.g., Advarra OnCore, Clinical Conductor).","Al Habib as a site needs the latter, linked to the hospital system to find eligible patients and separate study costs from patient bills. Mixing them is a common financial and ethical problem."]},
+ {k:"h",ar:"LIMS ووظائفه",en:"LIMS and its functions"},
+ {k:"ul",ar:["استقبال العينات برمز شريطي وتسجيل حالتها.","سلسلة الحفظ: من تعامل مع العينة ومتى وأين.","التخزين: موقع كل عينة في المجمد، ومراقبة الحرارة.","سير العمل وربط الأجهزة لاستقبال النتائج آلياً.","الجودة: عينات الضبط وقبول التشغيل وإعادة التحليل.","سجل تدقيق لكل تعديل: من ومتى ولماذا.","للتحليل الحيوي تحديداً: Watson LIMS، يصفه منتجه بأنه المعيار في المختبرات المنظمة منذ أكثر من عقدين."],
+  en:["Barcoded sample receipt and condition.","Chain of custody: who, when, where.","Storage location and temperature monitoring.","Workflow and instrument integration.","Quality: controls, run acceptance, reanalysis.","Audit trail for every change: who, when, why.","For bioanalysis: Watson LIMS, described by its maker as the standard in regulated labs for over two decades."]},
+ {k:"h",ar:"منظومة مركز التكافؤ",en:"The BE centre stack"},
+ {k:"ol",ar:["قاعدة بيانات المتطوعين: منع المشاركة المتكررة.","الشق السريري: تسجيل مصدري إلكتروني (مثل ClinSpark) أو EDC.","العينات: LIMS برموز شريطية.","التحليل الحيوي: LIMS متخصص + برنامج جهاز LC-MS/MS.","الحرائك: Phoenix WinNonlin.","الإحصاء: SAS أو R.","التقرير: نظام وثائق وجودة."],
+  en:["Volunteer database: prevent over-volunteering.","Clinical: eSource (e.g., ClinSpark) or EDC.","Samples: barcoded LIMS.","Bioanalysis: specialist LIMS + LC-MS/MS software.","PK: Phoenix WinNonlin.","Statistics: SAS or R.","Report: document and quality system."]},
+ {k:"h",ar:"الامتثال ومبدأ ALCOA+",en:"Compliance and ALCOA+"},
+ {k:"p",ar:"الأنظمة في البيئة المنظمة يجب أن تتوافق مع Part 11 الأمريكي للسجلات والتوقيعات الإلكترونية، و Annex 11 الأوروبي، وإطار GAMP 5 للتحقق حسب المخاطر، و ICH E6(R3). وفي المملكة: نظام حماية البيانات الشخصية وضوابط الهيئة الوطنية للأمن السيبراني عند الاستضافة السحابية. والبيانات يجب أن تكون: منسوبة، ومقروءة، وآنية، وأصلية، ودقيقة، وكاملة، ومتسقة، ودائمة، ومتاحة (ALCOA+).",en:"Regulated systems must meet US Part 11 for electronic records and signatures, EU Annex 11, the GAMP 5 risk-based validation framework, and ICH E6(R3). In KSA: the Personal Data Protection Law and National Cybersecurity Authority controls for cloud hosting. Data must be Attributable, Legible, Contemporaneous, Original, Accurate, Complete, Consistent, Enduring, and Available (ALCOA+)."},
+ {k:"p",ar:"دورة التطبيق: تحديد المتطلبات (URS)، ثم تقييم الموردين، ثم الشراء، ثم التهيئة، ثم التحقق (IQ و OQ و PQ)، ثم التدريب، ثم التشغيل، ثم المراجعة الدورية والتحكم في التغيير.",en:"Lifecycle: user requirements (URS), vendor evaluation, procurement, configuration, validation (IQ, OQ, PQ), training, go-live, periodic review and change control."},
+ {k:"note",ar:"نقطتك القوية من خلفية الشراء: أكبر مخاطر الأنظمة ليست في اختيار البرنامج، بل في كتابة المتطلبات بدقة والتحقق والتكامل. نظام ممتاز بمتطلبات ضعيفة يفشل.",en:"Your procurement strength: the biggest system risk isn’t the software choice but precise requirements, validation, and integration. A great system with weak requirements fails."}
+ ],
+ self:[
+  {q:{ar:"ما الفرق بين CTMS و EDC بجملة واحدة؟",en:"CTMS vs EDC in one line?"},a:{ar:"CTMS: أين وصلنا؟ و EDC: ماذا وجدنا؟",en:"CTMS: where are we? EDC: what did we find?"}},
+  {q:{ar:"ما أهم نظام في مركز التكافؤ ولماذا؟",en:"Most important BE centre system, and why?"},a:{ar:"LIMS التحليل الحيوي، لأن النتيجة تعتمد على دقة التراكيز وسلسلة الحفظ.",en:"The bioanalytical LIMS; the result depends on accurate concentrations and chain of custody."}},
+  {q:{ar:"ما مراحل التحقق الثلاث؟",en:"The three validation stages?"},a:{ar:"التركيب (IQ) والتشغيل (OQ) والأداء (PQ).",en:"Installation (IQ), operational (OQ), performance (PQ)."}}
+ ]}
+];
+
+const GLOSS=[
+ ["AAHRPP","اعتماد دولي لبرامج حماية المشاركين في البحوث","Accreditation of human research protection programmes"],
+ ["ALCOA+","مبادئ نزاهة البيانات: منسوبة، مقروءة، آنية، أصلية، دقيقة، كاملة، متسقة، دائمة، متاحة","Data integrity principles"],
+ ["AUC","المساحة تحت منحنى التركيز؛ كمية الامتصاص","Area under the curve; extent of absorption"],
+ ["BCS","نظام التصنيف الصيدلاني الحيوي؛ أساس الإعفاء الحيوي","Biopharmaceutics Classification System"],
+ ["BE","التكافؤ الحيوي","Bioequivalence"],
+ ["Biowaiver","إعفاء من الدراسة البشرية","Waiver of in-vivo BE study"],
+ ["Blinding","التعمية: إخفاء نوع العلاج","Concealing treatment allocation"],
+ ["CDS","نظام بيانات الكروماتوغرافيا (البيانات الخام)","Chromatography Data System"],
+ ["Cmax","أعلى تركيز في الدم؛ معدل الامتصاص","Peak concentration; rate of absorption"],
+ ["CPD","التطوير المهني المستمر","Continuing Professional Development"],
+ ["CRF","نموذج الحالة لتسجيل بيانات المشارك","Case Report Form"],
+ ["CRO","منظمة بحوث تعاقدية تعمل للراعي","Contract Research Organisation"],
+ ["CTA","اتفاقية التجربة السريرية بين الراعي والموقع","Clinical Trial Agreement"],
+ ["CTMS","نظام إدارة عمليات التجارب","Clinical Trial Management System"],
+ ["Delegation Log","سجل التفويض بالمهام في الموقع","Record of delegated site tasks"],
+ ["DSUR","تقرير السلامة التطويري السنوي","Development Safety Update Report"],
+ ["EDC","جمع البيانات إلكترونياً","Electronic Data Capture"],
+ ["ELN","دفتر المختبر الإلكتروني","Electronic Laboratory Notebook"],
+ ["eTMF / eISF","ملف التجربة الرئيسي / ملف الموقع إلكترونياً","Electronic Trial Master File / Investigator Site File"],
+ ["GAMP 5","إطار ISPE للتحقق من الأنظمة الحاسوبية","ISPE computerised system validation framework"],
+ ["GCLP","الممارسة الجيدة للمختبر السريري","Good Clinical Laboratory Practice"],
+ ["GCP","الممارسة السريرية الجيدة","Good Clinical Practice"],
+ ["GLP","الممارسة المختبرية الجيدة","Good Laboratory Practice"],
+ ["GMP","ممارسات التصنيع الجيدة","Good Manufacturing Practice"],
+ ["GMR","نسبة المتوسط الهندسي","Geometric Mean Ratio"],
+ ["GVP","ممارسات اليقظة الدوائية الجيدة","Good Pharmacovigilance Practices"],
+ ["HVD","دواء عالي التباين (≥ 30%)","Highly Variable Drug"],
+ ["IAOCR","جهة اعتماد دولية للبحوث السريرية","International Accrediting Organization for Clinical Research"],
+ ["IB","كتيب الباحث","Investigator’s Brochure"],
+ ["ICF","نموذج الموافقة المستنيرة","Informed Consent Form"],
+ ["ICH E3","دليل كتابة تقرير الدراسة السريرية","Guideline on clinical study reports"],
+ ["ICH E6(R3)","دليل الممارسة السريرية الجيدة، الإصدار الثالث (2025)","GCP guideline, third revision (2025)"],
+ ["IDMC","لجنة مستقلة لمراقبة البيانات","Independent Data Monitoring Committee"],
+ ["IP","المستحضر التجريبي","Investigational Product"],
+ ["IQ / OQ / PQ","التحقق من التركيب والتشغيل والأداء","Installation / Operational / Performance Qualification"],
+ ["IRB","لجنة أخلاقيات البحث المؤسسية","Institutional Review Board"],
+ ["IRT / RTSM","التوزيع العشوائي وإدارة إمداد الدواء","Randomisation and trial supply management"],
+ ["LC-MS/MS","جهاز كروماتوغرافيا سائلة مع مطياف كتلة ترادفي","Liquid chromatography–tandem mass spectrometry"],
+ ["LIMS","نظام إدارة معلومات المختبر","Laboratory Information Management System"],
+ ["MAH","صاحب حق التسويق","Marketing Authorisation Holder"],
+ ["NCBE","اللجنة الوطنية للأخلاقيات الحيوية","National Committee of Bioethics"],
+ ["NTI","ضيق المؤشر العلاجي","Narrow Therapeutic Index"],
+ ["Part 11","لائحة FDA للسجلات والتوقيعات الإلكترونية","FDA rule on electronic records and signatures"],
+ ["PI","الباحث الرئيس","Principal Investigator"],
+ ["PK","الحرائك الدوائية","Pharmacokinetics"],
+ ["Protocol Deviation","انحراف عن البروتوكول","Departure from the approved protocol"],
+ ["PTAP","برنامج الوصول للعلاج بعد التجربة","Post-Trial Access Programme"],
+ ["Randomisation","التوزيع العشوائي","Random allocation"],
+ ["Reliance Pathway","مسار الاعتماد على موافقة جهة صارمة","Pathway relying on a stringent authority’s approval"],
+ ["SCFHS","الهيئة السعودية للتخصصات الصحية","Saudi Commission for Health Specialties"],
+ ["SCTR","السجل السعودي للتجارب السريرية","Saudi Clinical Trials Registry"],
+ ["SFDA","الهيئة العامة للغذاء والدواء","Saudi Food and Drug Authority"],
+ ["SMO","منظمة إدارة الموقع، تعمل للموقع والباحث","Site Management Organisation"],
+ ["SOP","إجراء تشغيلي قياسي","Standard Operating Procedure"],
+ ["Sponsor","الراعي","The party that initiates, manages, and funds a trial"],
+ ["SRA","جهة تنظيمية صارمة (FDA، EMA، MHRA، Swissmedic)","Stringent Regulatory Authority"],
+ ["SUSAR","تفاعل خطير غير متوقع مشتبه به","Suspected Unexpected Serious Adverse Reaction"],
+ ["TransCelerate","اتحاد شركات دوائية؛ اعتراف متبادل بتدريب GCP","Pharma consortium; mutual GCP recognition"],
+ ["URS","متطلبات المستخدم","User Requirements Specification"],
+ ["Washout","فترة الغسيل بين فترتي الدراسة","Interval between study periods"]
+];
+
+/* ================= RENDER ================= */
+const main=document.getElementById("main");
+let current=store.get("view","home");
+function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
+function navs(){
+  ["rail","tabs"].forEach(id=>{
+    const n=document.getElementById(id);
+    n.innerHTML=ORDER.map(k=>`<button type="button" data-v="${k}" aria-current="${k===current}">${T(UI.nav[k])}</button>`).join("");
+    n.querySelectorAll("button").forEach(b=>b.onclick=()=>go(b.dataset.v));
+  });
+}
+function go(v){current=v;store.set("view",v);render();window.scrollTo({top:0});}
+function checklistStats(){const done=store.get("check",{});let total=0,n=0;CHECK.forEach((g,gi)=>g.items.forEach((_,ii)=>{total++;if(done[gi+"-"+ii])n++}));return{n,total};}
+function listHTML(arr){return "<ul>"+arr.map(x=>`<li>${esc(T(x))}</li>`).join("")+"</ul>";}
+function tableHTML(h,r){return `<div class="tbl"><table><thead><tr>${h.map(x=>`<th>${esc(x)}</th>`).join("")}</tr></thead><tbody>${r.map(row=>`<tr>${row.map((c,i)=>i===0?`<th>${esc(c)}</th>`:`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;}
+
+const V={};
+V.home=()=>{const s=checklistStats();const ls=Object.keys(store.get("les",{})).length;const prac=Object.keys(store.get("prac",{})).length;const best=store.get("best",null);
+ return `<div class="hero"><p class="who">${L==="ar"?"د. مرام سندوقة":"Dr. Maram Sandouka"}</p>
+ <p class="what">${L==="ar"?"مقابلة مع د. زياد ميمش — مجموعة الدكتور سليمان الحبيب الطبية: الأكاديمية ومركز الأبحاث والأخلاقيات":"Interview with Dr. Ziad Memish — Dr. Sulaiman Al Habib Medical Group: Academy, Research Center, and ethics"}</p></div>
+ <div class="meters">
+  <div class="meter"><b>${ls}/${LESSONS.length}</b><span>${L==="ar"?"دروس أنهيتِها":"Lessons done"}</span></div>
+  <div class="meter"><b>${s.n}/${s.total}</b><span>${L==="ar"?"بنود التجهيز المنجزة":"Checklist done"}</span></div>
+  <div class="meter"><b>${prac}/${QS.length}</b><span>${L==="ar"?"أسئلة تدربتِ عليها":"Questions practised"}</span></div>
+  <div class="meter"><b>${best===null?"—":best+"%"}</b><span>${L==="ar"?"أفضل نتيجة اختبار":"Best quiz score"}</span></div>
+ </div>
+ <div class="warn"><b>${L==="ar"?"ابدئي من هنا:":"Start here:"}</b> ${L==="ar"?"تصحيح تواريخ السيرة الذاتية هو أهم بند. رئيس تحرير سيلاحظ أي تناقض فوراً.":"Fixing the CV dates is the single most important item. An editor-in-chief will notice any inconsistency immediately."}</div>
+  <h3>${L==="ar"?"خطة مذاكرة مقترحة":"Suggested study plan"}</h3>
+ <div class="box"><ul>
+  <li>${L==="ar"?"اليوم الأول: قائمة التجهيز (السيرة والشهادات)، ثم الدرس 8 عن المحاور والحبيب.":"Day 1: checklist (CV and certificates), then Lesson 8 on the interviewer and Al Habib."}</li>
+  <li>${L==="ar"?"اليوم الثاني: الدروس 1 إلى 5 (الأخلاقيات، المراحل، الموافقات، التكافؤ)، مع أسئلة «اختبري نفسك» في آخر كل درس.":"Day 2: Lessons 1–5 (ethics, phases, approvals, BE), with the self-check at the end of each."}</li>
+  <li>${L==="ar"?"اليوم الثالث: الدروس 6 و 7 و 9 و 10، ثم قاموس المصطلحات.":"Day 3: Lessons 6, 7, 9, 10, then the glossary."}</li>
+  <li>${L==="ar"?"اليوم الرابع: بطاقات الحفظ، ثم الاختبار، ثم محاكاة المقابلة بصوت عالي.":"Day 4: flashcards, the quiz, then the mock interview aloud."}</li>
+  <li>${L==="ar"?"اليوم الخامس: المراجعة السريعة، ومقترحاتك للحبيب، ومحاكاة ثانية، وإعادة الاختبار.":"Day 5: quick review, your proposals, a second mock, retake the quiz."}</li>
+  <li>${L==="ar"?"يوم المقابلة: «ورقة اليوم الأخير» فقط.":"Interview day: the final-day sheet only."}</li></ul></div>
+ <div class="go"><button class="btn" data-go="study">${L==="ar"?"ابدئي المذاكرة":"Start studying"}</button><button class="btn ghost" data-go="rehearse">${T(UI.nav.rehearse)}</button><button class="btn ghost" data-go="brief">${T(UI.nav.brief)}</button><button class="btn ghost" data-go="check">${T(UI.nav.check)}</button></div>`;};
+
+V.brief=()=>`<h2>${T(UI.nav.brief)}</h2><p class="lead">${L==="ar"?"راجعيها قبل المقابلة بساعة. لا تضيفي عليها شيئاً جديداً يوم المقابلة.":"Review an hour before. Add nothing new on the day."}</p>
+ <h3>${L==="ar"?"أرقام ومعلومات يجب أن تكون حاضرة":"Numbers and facts to have ready"}</h3>
+ <div class="facts">${FACTS.map(f=>`<div class="fact"><b class="ltr">${esc(f.b)}</b><span>${esc(L==="ar"?f.a:f.e)}</span></div>`).join("")}</div>
+ <h3>${L==="ar"?"التعريف بالنفس في 60 ثانية":"60-second pitch"}</h3>
+ <div class="strong">${esc(T(PITCH))}</div>
+ <h3>${L==="ar"?"الرسالة الأساسية":"Core message"}</h3>
+ <div class="box">${L==="ar"?"لستِ باحثة تنافس المحاور، بل الشخص الذي يحوّل البحث إلى بنية تشغيلية تعمل: مرافق مرخصة، وإجراءات، وفرق مدربة، وأنظمة، وموردون، وميزانيات.":"You are not a researcher competing with the interviewer; you are the person who turns research into working infrastructure: licensed facilities, procedures, trained teams, systems, suppliers, and budgets."}</div>
+ <h3>${L==="ar"?"أسئلتك للمحاور":"Your questions for the interviewer"}</h3><div class="box">${listHTML(ASK)}</div>
+ <h3>${L==="ar"?"لا تقولي":"Don’t say"}</h3><div class="warn">${listHTML(DONT)}</div>`;
+
+V.people=()=>`<h2>${T(UI.nav.people)}</h2><p class="lead">${L==="ar"?"معلومات منشورة ومتحقق منها. ما لم يُنشر موضح في آخر الصفحة.":"Published, verified information. Unpublished points are flagged at the end."}</p>
+ <h3>${L==="ar"?"د. زياد ميمش":"Dr. Ziad Memish"}</h3><div class="box">${listHTML(MEMISH)}</div>
+ <h3>${L==="ar"?"مجموعة الدكتور سليمان الحبيب":"Dr. Sulaiman Al Habib Medical Group"}</h3><div class="box">${listHTML(HMG.slice(0,-1))}</div>
+ <div class="warn">${esc(T(HMG[HMG.length-1]))}</div>
+ <div class="strong">${L==="ar"?"د. زياد جزء من هذه المنظومة الأكاديمية. أي ملاحظة على اللجنة أو الإجراءات تُطرح كفرصة تطوير، وليس كخلل.":"Dr. Ziad is part of this academic system. Frame any point about the IRB or processes as an improvement opportunity, never a flaw."}</div>
+ <h3>${L==="ar"?"روابط":"Links"}</h3><div class="box"><ul>
+  <li><a href="https://academy.hmg.com/SAA/research.html" target="_blank" rel="noopener">${L==="ar"?"صفحة مركز الأبحاث ولجنة الأخلاقيات":"Research Center and IRB page"}</a></li>
+  <li><span class="ltr">research.center@drsulaimanalhabib.com</span></li>
+  <li><a href="https://www.sfda.gov.sa/sites/default/files/2026-06/ConductingClinicalTrialsDrugE_1.pdf" target="_blank" rel="noopener">${L==="ar"?"دليل SFDA للتجارب السريرية الإصدار 4.0":"SFDA clinical trials guideline v4.0"}</a></li></ul></div>`;
+
+V.learn=()=>`<h2>${T(UI.nav.learn)}</h2><p class="lead">${L==="ar"?"ملخص مركّز للمراجعة بعد إنهاء الدروس. الفقرة المظللة هي نقطتك القوية في المقابلة.":"A condensed recap after finishing the lessons. The highlighted line is your interview strong point."}</p>
+ ${TOPICS.map((tp,i)=>`<details${i===0?" open":""}><summary>${esc(T(tp.t))}</summary><div class="inner">
+  ${tp.b?listHTML(tp.b[L].map(x=>({ar:x,en:x}))):""}
+  ${tp.table?tableHTML(tp.table.h[L],tp.table.r[L]):""}
+  ${tp.extra?listHTML(tp.extra[L].map(x=>({ar:x,en:x}))):""}
+  <div class="strong">${esc(T(tp.s))}</div></div></details>`).join("")}`;
+
+let rq={cat:"all",i:0,list:null};let timer={left:90,run:false,h:null};
+function rList(){return QS.map((q,i)=>({...q,idx:i})).filter(q=>rq.cat==="all"||q.c===rq.cat);}
+V.rehearse=()=>{rq.list=rList();if(rq.i>=rq.list.length)rq.i=0;const q=rq.list[rq.i];const prac=store.get("prac",{});
+ return `<h2>${T(UI.nav.rehearse)}</h2><p class="lead">${L==="ar"?"اقرئي السؤال، شغّلي المؤقت، وأجيبي بصوت عالي خلال 90 ثانية. ثم قارني بالإجابة النموذجية.":"Read the question, start the timer, answer aloud within 90 seconds, then compare with the model answer."}</p>
+ <div class="filters">${[["all",{ar:"الكل",en:"All"}],...Object.entries(CATS)].map(([k,v])=>`<button class="chip" type="button" data-cat="${k}" aria-pressed="${rq.cat===k}">${esc(T(v))}</button>`).join("")}</div>
+ <div class="stage"><span class="tag">${esc(T(CATS[q.c]))}</span>${prac[q.idx]?`<span class="tag">${L==="ar"?"تدربتِ عليه":"Practised"}</span>`:""}
+  <p class="q">${esc(T(q.q))}</p>
+  <div class="stagebar"><div class="ring"><svg width="74" height="74"><circle cx="37" cy="37" r="32" stroke="var(--glass)" stroke-width="7" fill="none"/><circle id="arc" cx="37" cy="37" r="32" stroke="var(--amber)" stroke-width="7" fill="none" stroke-dasharray="201" stroke-dashoffset="${201*(1-timer.left/90)}" stroke-linecap="round"/></svg><div class="num" id="tnum">${timer.left}</div></div>
+   <button class="btn small" id="tgo" type="button">${timer.run?(L==="ar"?"إيقاف":"Pause"):(L==="ar"?"ابدئي المؤقت":"Start timer")}</button>
+   <button class="btn small ghost" id="treset" type="button">${L==="ar"?"إعادة":"Reset"}</button>
+   <button class="btn small ghost" id="reveal" type="button">${L==="ar"?"اعرضي الإجابة النموذجية":"Show model answer"}</button></div>
+  <div class="answer" id="ans"><div class="strong">${esc(T(q.a))}</div>
+   <button class="btn small" id="mark" type="button">${prac[q.idx]?(L==="ar"?"إلغاء علامة التدرب":"Unmark practised"):(L==="ar"?"علّميه كمتدرَّب عليه":"Mark as practised")}</button></div>
+ </div>
+ <div class="navrow"><button class="btn ghost small" id="prev" type="button">${L==="ar"?"السابق":"Previous"}</button><button class="btn small" id="next" type="button">${L==="ar"?"التالي":"Next"}</button><button class="btn ghost small" id="shuf" type="button">${L==="ar"?"سؤال عشوائي":"Random question"}</button><span class="count">${rq.i+1} / ${rq.list.length}</span></div>`;};
+function bindRehearse(){
+ main.querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{rq.cat=b.dataset.cat;rq.i=0;resetTimer();render();});
+ const q=rq.list[rq.i];
+ document.getElementById("reveal").onclick=()=>document.getElementById("ans").classList.toggle("show");
+ document.getElementById("mark").onclick=()=>{const p=store.get("prac",{});if(p[q.idx])delete p[q.idx];else p[q.idx]=1;store.set("prac",p);render();document.getElementById("ans").classList.add("show");};
+ document.getElementById("prev").onclick=()=>{rq.i=(rq.i-1+rq.list.length)%rq.list.length;resetTimer();render();};
+ document.getElementById("next").onclick=()=>{rq.i=(rq.i+1)%rq.list.length;resetTimer();render();};
+ document.getElementById("shuf").onclick=()=>{rq.i=Math.floor(Math.random()*rq.list.length);resetTimer();render();};
+ document.getElementById("tgo").onclick=()=>{if(timer.run){clearInterval(timer.h);timer.run=false;}else{timer.run=true;timer.h=setInterval(()=>{timer.left=Math.max(0,timer.left-1);const n=document.getElementById("tnum"),a=document.getElementById("arc");if(n)n.textContent=timer.left;if(a)a.setAttribute("stroke-dashoffset",201*(1-timer.left/90));if(timer.left===0){clearInterval(timer.h);timer.run=false;const b=document.getElementById("tgo");if(b)b.textContent=L==="ar"?"ابدئي المؤقت":"Start timer";}},1000);}document.getElementById("tgo").textContent=timer.run?(L==="ar"?"إيقاف":"Pause"):(L==="ar"?"ابدئي المؤقت":"Start timer");};
+ document.getElementById("treset").onclick=()=>{resetTimer();render();};
+}
+function resetTimer(){clearInterval(timer.h);timer.run=false;timer.left=90;}
+
+let fc={i:0,order:CARDS.map((_,i)=>i)};
+V.cards=()=>{const c=CARDS[fc.order[fc.i]];return `<h2>${T(UI.nav.cards)}</h2><p class="lead">${L==="ar"?"اضغطي على البطاقة لقلبها.":"Tap the card to flip it."}</p>
+ <div class="flip"><div class="fc" id="fc" role="button" tabindex="0" aria-label="flip"><div class="face"><b class="ltr">${esc(c[0])}</b></div><div class="face back">${esc(L==="ar"?c[1]:c[2])}</div></div></div>
+ <div class="navrow"><button class="btn ghost small" id="fprev" type="button">${L==="ar"?"السابقة":"Previous"}</button><button class="btn small" id="fnext" type="button">${L==="ar"?"التالية":"Next"}</button><button class="btn ghost small" id="fshuf" type="button">${L==="ar"?"خلط البطاقات":"Shuffle"}</button><span class="count">${fc.i+1} / ${CARDS.length}</span></div>`;};
+function bindCards(){const el=document.getElementById("fc");const flip=()=>el.classList.toggle("turn");el.onclick=flip;el.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();flip();}};
+ document.getElementById("fprev").onclick=()=>{fc.i=(fc.i-1+CARDS.length)%CARDS.length;render();};
+ document.getElementById("fnext").onclick=()=>{fc.i=(fc.i+1)%CARDS.length;render();};
+ document.getElementById("fshuf").onclick=()=>{fc.order.sort(()=>Math.random()-.5);fc.i=0;render();};}
+
+let qz={i:0,score:0,answered:false,done:false};
+V.quiz=()=>{if(qz.done){const pct=Math.round(100*qz.score/QUIZ.length);const best=store.get("best",0);if(pct>best)store.set("best",pct);
+  return `<h2>${T(UI.nav.quiz)}</h2><div class="stage"><p class="q">${L==="ar"?"نتيجتك":"Your score"}: <span class="ltr">${qz.score}/${QUIZ.length} (${pct}%)</span></p>
+  <div class="${pct>=80?"strong":"warn"}">${pct>=80?(L==="ar"?"ممتاز. أنتِ جاهزة في هذا الجزء.":"Excellent. You’re ready on this part."):(L==="ar"?"راجعي «الملخصات» ثم أعيدي المحاولة. الهدف 80% أو أكثر.":"Review the summaries and try again. Aim for 80% or more.")}</div>
+  <button class="btn" id="qre" type="button">${L==="ar"?"أعيدي الاختبار":"Retake the quiz"}</button></div>`;}
+ const q=QUIZ[qz.i];const opts=Array.isArray(q.o)?q.o:q.o[L];
+ return `<h2>${T(UI.nav.quiz)}</h2><p class="lead">${L==="ar"?"عشرون سؤالاً من محتوى المستندات والمعلومات الحديثة.":"Twenty questions from the documents and the latest research."}</p>
+ <div class="stage"><span class="count">${qz.i+1} / ${QUIZ.length}</span><p class="q">${esc(T(q.q))}</p>
+ ${opts.map((o,i)=>`<button class="opt" type="button" data-o="${i}">${esc(o)}</button>`).join("")}
+ <div class="expl" id="expl"><div class="box">${esc(T(q.x))}</div><button class="btn small" id="qnext" type="button">${qz.i+1<QUIZ.length?(L==="ar"?"السؤال التالي":"Next question"):(L==="ar"?"اعرضي النتيجة":"See score")}</button></div></div>`;};
+function bindQuiz(){if(qz.done){document.getElementById("qre").onclick=()=>{qz={i:0,score:0,answered:false,done:false};render();};return;}
+ const q=QUIZ[qz.i];main.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(qz.answered)return;qz.answered=true;const k=+b.dataset.o;
+  main.querySelectorAll(".opt")[q.c].classList.add("right");if(k!==q.c)b.classList.add("wrong");else qz.score++;document.getElementById("expl").classList.add("show");});
+ document.getElementById("qnext").onclick=()=>{qz.answered=false;if(qz.i+1<QUIZ.length)qz.i++;else qz.done=true;render();};}
+
+V.ideas=()=>`<h2>${T(UI.nav.ideas)}</h2><p class="lead">${L==="ar"?"ثلاث أفكار تطرحينها كقيمة مضافة. اطرحيها كحل لمشكلة لديهم، بصيغة «أقترح».":"Three ideas to offer as added value. Frame each as a solution to their need, using “I propose”."}</p>
+ ${IDEAS.map(d=>`<details open><summary>${esc(T(d.t))}</summary><div class="inner">
+ <p><b>${L==="ar"?"لماذا:":"Why:"}</b> ${esc(T(d.why))}</p>
+ <p><b>${L==="ar"?"كيف:":"How:"}</b></p>${listHTML(d.how[L].map(x=>({ar:x,en:x})))}
+ <div class="strong"><b>${L==="ar"?"قوليها هكذا:":"Say it like this:"}</b> ${esc(T(d.say))}</div></div></details>`).join("")}
+ <h3>${L==="ar"?"خطة أول 90 يوماً":"First 90 days"}</h3><div class="box"><ul>
+ <li>${L==="ar"?"الشهر الأول: الاستماع وفهم الوضع وقياس المؤشرات الأساسية.":"Month 1: listen, map the current state, baseline KPIs."}</li>
+ <li>${L==="ar"?"الشهر الثاني: الاتفاق على ثلاث فرص سريعة مع أصحاب القرار.":"Month 2: agree three quick wins with decision-makers."}</li>
+ <li>${L==="ar"?"الشهر الثالث: تنفيذ أولها وتقديم تصور لأحد المقترحات حسب الأولوية.":"Month 3: deliver the first and present one proposal by priority."}</li></ul></div>`;
+
+V.check=()=>{const done=store.get("check",{});const s=checklistStats();
+ return `<h2>${T(UI.nav.check)}</h2><p class="lead">${L==="ar"?"تُحفظ علاماتك على هذا الجهاز.":"Your ticks are saved on this device."}</p>
+ <div class="pbar"><i style="width:${Math.round(100*s.n/s.total)}%"></i></div><span class="count">${s.n} / ${s.total}</span>
+ ${CHECK.map((g,gi)=>`<h3>${esc(T(g.g))}</h3><div class="box" style="padding:4px 6px">${g.items.map((it,ii)=>{const k=gi+"-"+ii;return `<div class="chk${done[k]?" done":""}"><input type="checkbox" id="c${k}" data-k="${k}"${done[k]?" checked":""}><label for="c${k}">${esc(T(it))}</label></div>`}).join("")}</div>`).join("")}
+ <div class="go"><button class="btn ghost small" id="creset" type="button">${L==="ar"?"مسح كل العلامات":"Clear all ticks"}</button></div>`;};
+function bindCheck(){main.querySelectorAll("input[data-k]").forEach(c=>c.onchange=()=>{const d=store.get("check",{});if(c.checked)d[c.dataset.k]=1;else delete d[c.dataset.k];store.set("check",d);render();});
+ document.getElementById("creset").onclick=()=>{store.set("check",{});render();};}
+
+
+let st={open:null};
+function blockHTML(x){
+ if(x.k==="h")return `<h3>${esc(T(x))}</h3>`;
+ if(x.k==="p")return `<p>${esc(T(x))}</p>`;
+ if(x.k==="ul")return "<ul>"+x[L].map(i=>`<li>${esc(i)}</li>`).join("")+"</ul>";
+ if(x.k==="ol")return "<ol>"+x[L].map(i=>`<li>${esc(i)}</li>`).join("")+"</ol>";
+ if(x.k==="tbl")return tableHTML(x.h[L],x.r[L]);
+ if(x.k==="note")return `<div class="strong">${esc(T(x))}</div>`;
+ if(x.k==="warn")return `<div class="warn">${esc(T(x))}</div>`;
+ return "";}
+V.study=()=>{const les=store.get("les",{});
+ if(st.open===null){return `<h2>${T(UI.nav.study)}</h2><p class="lead">${L==="ar"?"عشرة دروس مفصلة تغطي كل ما جمعناه. في آخر كل درس أسئلة «اختبري نفسك». علّمي الدرس كمنتهٍ عندما تجيبين عليها كلها.":"Ten detailed lessons covering everything we gathered. Each ends with a self-check; mark a lesson done once you can answer them all."}</p>
+ ${LESSONS.map((l,i)=>`<button class="lesson${les[l.id]?" done":""}" type="button" data-l="${i}"><span class="n">${les[l.id]?"✓":i+1}</span><span><b>${esc(T(l.t))}</b><span>${esc(T(l.goal))}</span></span></button>`).join("")}`;}
+ const l=LESSONS[st.open];
+ return `<div class="reader"><button class="btn ghost small" id="back" type="button">${L==="ar"?"كل الدروس":"All lessons"}</button>
+ <h2 style="margin-top:14px">${esc(T(l.t))}</h2><div class="goal"><b>${L==="ar"?"الهدف: ":"Goal: "}</b>${esc(T(l.goal))}</div>
+ ${l.b.map(blockHTML).join("")}
+ <h3>${L==="ar"?"اختبري نفسك":"Check yourself"}</h3><div class="box">${l.self.map((q,i)=>`<div class="selfq"><b>${esc(T(q.q))}</b><div><button class="btn ghost small" type="button" data-s="${i}" style="margin-top:6px">${L==="ar"?"اعرضي الإجابة":"Show answer"}</button></div><div class="ans" id="sa${i}">${esc(T(q.a))}</div></div>`).join("")}</div>
+ <div class="navrow"><button class="btn small" id="ldone" type="button">${les[l.id]?(L==="ar"?"إلغاء علامة الإنهاء":"Mark not done"):(L==="ar"?"أنهيتُ هذا الدرس":"Mark lesson done")}</button>
+ <button class="btn ghost small" id="lprev" type="button"${st.open===0?" disabled":""}>${L==="ar"?"الدرس السابق":"Previous lesson"}</button>
+ <button class="btn ghost small" id="lnext" type="button"${st.open===LESSONS.length-1?" disabled":""}>${L==="ar"?"الدرس التالي":"Next lesson"}</button>
+ <span class="count">${st.open+1} / ${LESSONS.length}</span></div></div>`;};
+function bindStudy(){
+ if(st.open===null){main.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>{st.open=+b.dataset.l;render();window.scrollTo({top:0});});return;}
+ const l=LESSONS[st.open];
+ document.getElementById("back").onclick=()=>{st.open=null;render();window.scrollTo({top:0});};
+ main.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>document.getElementById("sa"+b.dataset.s).classList.toggle("show"));
+ document.getElementById("ldone").onclick=()=>{const d=store.get("les",{});if(d[l.id])delete d[l.id];else d[l.id]=1;store.set("les",d);render();};
+ document.getElementById("lprev").onclick=()=>{if(st.open>0){st.open--;render();window.scrollTo({top:0});}};
+ document.getElementById("lnext").onclick=()=>{if(st.open<LESSONS.length-1){st.open++;render();window.scrollTo({top:0});}};}
+let gq="";
+V.gloss=()=>`<h2>${T(UI.nav.gloss)}</h2><p class="lead">${L==="ar"?`${GLOSS.length} مصطلحاً مرتبة أبجدياً. ابحثي بالعربي أو الإنجليزي.`:`${GLOSS.length} terms, alphabetical. Search in Arabic or English.`}</p>
+ <input class="search" id="gsearch" type="search" placeholder="${L==="ar"?"ابحثي عن مصطلح…":"Search a term…"}" value="${esc(gq)}">
+ <div class="tbl"><table><thead><tr><th>${L==="ar"?"المصطلح":"Term"}</th><th>${L==="ar"?"المعنى":"Meaning"}</th></tr></thead><tbody id="gbody"></tbody></table></div>`;
+function bindGloss(){const inp=document.getElementById("gsearch"),body=document.getElementById("gbody");
+ const draw=()=>{const q=gq.trim().toLowerCase();body.innerHTML=GLOSS.filter(g=>!q||g.join(" ").toLowerCase().includes(q)).map(g=>`<tr><th class="ltr">${esc(g[0])}</th><td>${esc(L==="ar"?g[1]:g[2])}</td></tr>`).join("")||`<tr><td colspan="2">${L==="ar"?"لا توجد نتائج. جربي كلمة أخرى.":"No matches. Try another word."}</td></tr>`;};
+ inp.oninput=()=>{gq=inp.value;draw();};draw();}
+
+function render(){
+ document.documentElement.lang=L;document.documentElement.dir=L==="ar"?"rtl":"ltr";
+ document.title=T(UI.title);document.getElementById("apptitle").textContent=T(UI.title);document.getElementById("langBtn").textContent=T(UI.lang);
+ navs();
+ main.innerHTML=`<section class="view on">${V[current]()}</section>`;
+ main.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
+ if(current==="study")bindStudy();if(current==="gloss")bindGloss();if(current==="rehearse")bindRehearse();if(current==="cards")bindCards();if(current==="quiz")bindQuiz();if(current==="check")bindCheck();
+}
+document.getElementById("langBtn").onclick=()=>{L=L==="ar"?"en":"ar";store.set("lang",L);render();};
+if(!V[current])current="home";
+render();
+</script>
+</body>
+</html>
